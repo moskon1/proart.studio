@@ -15,7 +15,7 @@ export default function About() {
             <div className="relative z-10 rounded-sm overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=1000"
-                alt="Studio Session"
+                alt="Sesiune Studio"
                 className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
               />
@@ -26,7 +26,7 @@ export default function About() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
               <div className="bg-studio-accent text-white p-8 rounded-sm shadow-2xl">
                 <span className="text-5xl font-display font-bold block">15+</span>
-                <span className="text-[10px] uppercase tracking-widest font-bold">Years of Experience</span>
+                <span className="text-[10px] uppercase tracking-widest font-bold">Ani de Experiență</span>
               </div>
             </div>
           </motion.div>
@@ -38,28 +38,28 @@ export default function About() {
             className="lg:w-1/2"
           >
             <span className="text-studio-accent font-bold uppercase tracking-[0.3em] text-xs block mb-4">
-              Our Story
+              Povestea Noastră
             </span>
-            <h2 className="text-5xl md:text-7xl font-display font-bold mb-8 leading-tight">
-              WE ARE <br /> <span className="text-studio-accent">RECOND</span> STUDIO
+            <h2 className="text-5xl md:text-7xl font-display font-bold mb-8 leading-tight text-studio-text-light">
+              SUNTEM <br /> <span className="text-studio-accent">PROART</span> STUDIO
             </h2>
             <p className="text-white/60 text-lg font-light leading-relaxed mb-8">
-              Founded in 2008, Recond Studio has been at the forefront of the music industry, 
-              providing artists with the perfect environment to capture their sound. 
-              Our mission is to bridge the gap between technical excellence and creative freedom.
+              Fondat în 2008, ProArt Studio a fost în fruntea industriei muzicale, 
+              oferind artiștilor mediul perfect pentru a-și surprinde sunetul. 
+              Misiunea noastră este de a reduce decalajul dintre excelența tehnică și libertatea creativă.
             </p>
             <div className="grid grid-cols-2 gap-8 mb-10">
               <div>
-                <h4 className="text-studio-accent font-display text-xl mb-2">Modern Gear</h4>
-                <p className="text-white/40 text-sm">The latest digital tools for precise production.</p>
+                <h4 className="text-studio-accent font-display text-xl mb-2">Echipament Modern</h4>
+                <p className="text-white/40 text-sm">Cele mai noi instrumente digitale pentru o producție precisă.</p>
               </div>
               <div>
-                <h4 className="text-studio-accent font-display text-xl mb-2">Analog Soul</h4>
-                <p className="text-white/40 text-sm">Vintage hardware for that classic warm sound.</p>
+                <h4 className="text-studio-accent font-display text-xl mb-2">Suflet Analog</h4>
+                <p className="text-white/40 text-sm">Hardware vintage pentru acel sunet cald clasic.</p>
               </div>
             </div>
-            <button className="border-b-2 border-studio-accent pb-2 text-xs font-bold uppercase tracking-widest hover:text-studio-accent transition-colors">
-              Learn More About Us
+            <button className="border-b-2 border-studio-accent pb-2 text-xs font-bold uppercase tracking-widest text-white hover:text-studio-accent transition-colors">
+              Află Mai Multe Despre Noi
             </button>
           </motion.div>
         </div>

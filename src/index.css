@@ -7,16 +7,20 @@
   --color-studio-accent: #f27d26;
   --color-studio-dark: #111111;
   --color-studio-darker: #0a0a0a;
-  --color-studio-gray: #1a1a1a;
+  --color-studio-light: #ffffff;
+  --color-studio-light-alt: #f8f8f8;
+  --color-studio-gray: #f0f0f0;
+  --color-studio-text: #111111;
+  --color-studio-text-light: #ffffff;
 }
 
 @layer base {
   body {
-    @apply bg-studio-darker text-white font-sans antialiased;
+    @apply bg-studio-darker text-studio-text font-sans antialiased;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display uppercase tracking-wider;
+    @apply font-display uppercase tracking-wider text-studio-text;
   }
 }
 

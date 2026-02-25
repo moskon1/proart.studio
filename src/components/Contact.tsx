@@ -1,81 +1,73 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Instagram, Twitter, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Twitter, Facebook, Send, MessageCircle } from 'lucide-react';
 
 export default function Contact() {
   return (
     <section id="contact" className="py-24 bg-studio-darker">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
-          <div>
-            <motion.span
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="text-studio-accent font-bold uppercase tracking-[0.3em] text-xs block mb-4"
-            >
-              Contact Us
-            </motion.span>
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-5xl md:text-8xl font-display font-bold mb-8 leading-tight"
-            >
-              GET IN <br /> <span className="text-studio-accent">TOUCH</span>
-            </motion.h2>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mt-12">
-              <div className="space-y-4">
-                <h4 className="text-studio-accent font-display text-2xl">Location</h4>
-                <p className="text-white/50 font-bold uppercase tracking-widest text-[10px] leading-relaxed">
-                  123 Studio Lane, <br /> Creative District, <br /> London, UK
-                </p>
-              </div>
-              
-              <div className="space-y-4">
-                <h4 className="text-studio-accent font-display text-2xl">Booking</h4>
-                <p className="text-white/50 font-bold uppercase tracking-widest text-[10px] leading-relaxed">
-                  hello@recondstudio.com <br /> +44 (0) 20 1234 5678
-                </p>
-              </div>
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-studio-accent font-bold uppercase tracking-[0.3em] text-xs block mb-4"
+          >
+            Contactează-ne
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-5xl md:text-8xl font-display font-bold mb-12 leading-tight text-studio-text-light"
+          >
+            HAI SĂ <br /> <span className="text-studio-accent">VORBIM</span>
+          </motion.h2>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-16 mt-12 w-full">
+            <div className="space-y-6">
+              <h4 className="text-studio-accent font-display text-3xl">Locație</h4>
+              <p className="text-white/50 font-bold uppercase tracking-[0.2em] text-xs leading-relaxed">
+                Liceul Tehnologic UCECOM Spiru Haret, <br /> 
+                Strada Doctor Toma Ionescu 27, <br /> 
+                100169 Ploiești, România
+              </p>
             </div>
-
-            <div className="flex gap-4 mt-12">
-              {[Instagram, Twitter, Facebook].map((Icon, i) => (
-                <a key={i} href="#" className="w-12 h-12 bg-studio-gray flex items-center justify-center hover:bg-studio-accent transition-all group">
-                  <Icon size={18} className="group-hover:scale-110 transition-transform" />
-                </a>
-              ))}
+            
+            <div className="space-y-6">
+              <h4 className="text-studio-accent font-display text-3xl">Rezervări</h4>
+              <p className="text-white/50 font-bold uppercase tracking-[0.2em] text-xs leading-relaxed">
+                hello@proartstudio.ro <br /> 
+                +40 722 123 456
+              </p>
             </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-studio-dark p-12 border border-white/5"
+            className="mt-20 space-y-8 w-full max-w-md"
           >
-            <form className="space-y-8">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <div className="space-y-3">
-                  <label className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/40">Full Name</label>
-                  <input type="text" className="w-full bg-transparent border-b border-white/10 py-2 focus:outline-none focus:border-studio-accent transition-colors text-sm uppercase tracking-widest font-bold" />
-                </div>
-                <div className="space-y-3">
-                  <label className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/40">Email Address</label>
-                  <input type="email" className="w-full bg-transparent border-b border-white/10 py-2 focus:outline-none focus:border-studio-accent transition-colors text-sm uppercase tracking-widest font-bold" />
-                </div>
-              </div>
-              <div className="space-y-3">
-                <label className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/40">Your Message</label>
-                <textarea rows={4} className="w-full bg-transparent border-b border-white/10 py-2 focus:outline-none focus:border-studio-accent transition-colors resize-none text-sm uppercase tracking-widest font-bold"></textarea>
-              </div>
-              <button className="bg-studio-accent text-white px-12 py-5 rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-studio-accent transition-all w-full">
-                Send Inquiry
-              </button>
-            </form>
+            <h4 className="text-studio-text-light font-display text-2xl uppercase tracking-widest">Rapid pe WhatsApp</h4>
+            <a 
+              href="https://wa.me/40722123456" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-4 bg-[#25D366] text-white px-10 py-5 rounded-sm font-bold uppercase tracking-widest hover:scale-105 transition-transform w-full shadow-xl"
+            >
+              <MessageCircle size={28} />
+              Trimite Mesaj WhatsApp
+            </a>
           </motion.div>
+
+          <div className="flex gap-6 mt-16">
+            {[Instagram, Twitter, Facebook].map((Icon, i) => (
+              <a key={i} href="#" className="w-14 h-14 bg-studio-gray/10 flex items-center justify-center hover:bg-studio-accent hover:text-white transition-all group border border-white/5">
+                <Icon size={20} className="group-hover:scale-125 transition-transform text-white" />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>

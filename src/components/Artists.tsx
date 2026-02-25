@@ -20,13 +20,13 @@ const artists = [
   {
     name: 'Sarah J.',
     genre: 'Jazz / Soul',
-    image: 'https://images.unsplash.com/photo-1514525253361-bee8718a340b?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1525362081669-2b476bb628c3?auto=format&fit=crop&q=80&w=800',
   },
 ];
 
 export default function Artists() {
   return (
-    <section id="artists" className="py-24 bg-studio-dark">
+    <section id="artists" className="py-24 bg-studio-light-alt">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
           <motion.span
@@ -35,15 +35,15 @@ export default function Artists() {
             viewport={{ once: true }}
             className="text-studio-accent font-bold uppercase tracking-[0.3em] text-xs block mb-4"
           >
-            Our Portfolio
+            Portofoliul Nostru
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-8xl font-display font-bold"
+            className="text-5xl md:text-8xl font-display font-bold text-studio-text"
           >
-            OUR <span className="text-studio-accent">ARTISTS</span>
+            ARTIȘTII <span className="text-studio-accent">NOȘTRI</span>
           </motion.h2>
         </div>
 
@@ -55,7 +55,7 @@ export default function Artists() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative aspect-square overflow-hidden bg-studio-darker cursor-pointer"
+              className="group relative aspect-square overflow-hidden bg-studio-gray cursor-pointer"
             >
               <img
                 src={artist.image}
@@ -88,7 +88,7 @@ export default function Artists() {
                   <motion.button 
                     className="border border-white/40 px-6 py-2 text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-studio-accent transition-all transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 delay-300"
                   >
-                    View Project
+                    Vezi Proiectul
                   </motion.button>
                 </div>
               </div>

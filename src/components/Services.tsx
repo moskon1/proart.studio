@@ -5,33 +5,33 @@ import { Mic2, Music, Radio, Headphones, Layers, Volume2, ChevronLeft, ChevronRi
 const services = [
   {
     icon: Mic2,
-    title: 'Recording',
-    description: 'High-fidelity vocal and instrument recording in acoustically treated rooms with premium microphones.',
+    title: 'Înregistrare',
+    description: 'Înregistrare vocală și instrumentală de înaltă fidelitate în camere tratate acustic cu microfoane premium.',
   },
   {
     icon: Layers,
-    title: 'Mixing',
-    description: 'Professional multi-track mixing to ensure every element of your song sits perfectly in the soundstage.',
+    title: 'Mixaj',
+    description: 'Mixaj profesional multi-track pentru a asigura că fiecare element al piesei tale stă perfect în scenă.',
   },
   {
     icon: Volume2,
     title: 'Mastering',
-    description: 'The final polish your music needs to sound professional across all playback systems and platforms.',
+    description: 'Ultima finisare de care are nevoie muzica ta pentru a suna profesional pe toate sistemele de redare.',
   },
   {
     icon: Music,
-    title: 'Production',
-    description: 'Full-service music production, from arrangement and beat-making to final vocal production.',
+    title: 'Producție',
+    description: 'Servicii complete de producție muzicală, de la aranjament și beat-making până la producția vocală finală.',
   },
   {
     icon: Radio,
     title: 'Podcasting',
-    description: 'Crystal clear voice recording and editing for podcasts, audiobooks, and voice-over projects.',
+    description: 'Înregistrare și editare vocală clară pentru podcasturi, audiobook-uri și proiecte de voice-over.',
   },
   {
     icon: Headphones,
-    title: 'Sound Design',
-    description: 'Custom sound effects and atmospheric textures for film, games, and commercial media.',
+    title: 'Design Sonor',
+    description: 'Efecte sonore personalizate și texturi atmosferice pentru film, jocuri și media comercială.',
   },
 ];
 
@@ -57,28 +57,28 @@ export default function Services() {
               viewport={{ once: true }}
               className="text-studio-accent font-bold uppercase tracking-[0.3em] text-xs block mb-4"
             >
-              What We Offer
+              Ce Oferim
             </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-5xl md:text-8xl font-display font-bold"
+              className="text-5xl md:text-8xl font-display font-bold text-studio-text-light"
             >
-              STUDIO <span className="text-studio-accent">SERVICES</span>
+              SERVICII <span className="text-studio-accent">STUDIO</span>
             </motion.h2>
           </div>
           
           <div className="flex gap-4">
             <button 
               onClick={() => scroll('left')}
-              className="w-12 h-12 border border-white/10 flex items-center justify-center hover:bg-studio-accent hover:border-studio-accent transition-all text-white"
+              className="w-12 h-12 border border-white/10 flex items-center justify-center hover:bg-studio-accent hover:border-studio-accent hover:text-white transition-all text-white"
             >
               <ChevronLeft size={20} />
             </button>
             <button 
               onClick={() => scroll('right')}
-              className="w-12 h-12 border border-white/10 flex items-center justify-center hover:bg-studio-accent hover:border-studio-accent transition-all text-white"
+              className="w-12 h-12 border border-white/10 flex items-center justify-center hover:bg-studio-accent hover:border-studio-accent hover:text-white transition-all text-white"
             >
               <ChevronRight size={20} />
             </button>
@@ -103,10 +103,10 @@ export default function Services() {
               <div className="absolute inset-0 bg-studio-accent translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" />
               
               <div className="relative z-10">
-                <div className="w-16 h-16 bg-studio-gray rounded-sm flex items-center justify-center mb-8 group-hover:bg-white transition-colors duration-500">
+                <div className="w-16 h-16 bg-studio-gray/10 rounded-sm flex items-center justify-center mb-8 group-hover:bg-white transition-colors duration-500">
                   <service.icon className="text-studio-accent group-hover:text-studio-accent w-8 h-8 transition-colors duration-500" />
                 </div>
-                <h3 className="text-3xl font-display font-bold mb-4 group-hover:text-white transition-colors duration-500">
+                <h3 className="text-3xl font-display font-bold mb-4 group-hover:text-white transition-colors duration-500 text-studio-text-light">
                   {service.title}
                 </h3>
                 <p className="text-white/40 group-hover:text-white/80 leading-relaxed font-medium text-sm uppercase tracking-wider transition-colors duration-500">
@@ -114,7 +114,7 @@ export default function Services() {
                 </p>
                 
                 <div className="mt-8 flex items-center gap-2 text-studio-accent group-hover:text-white transition-colors duration-500">
-                  <span className="text-[10px] font-bold uppercase tracking-widest">Read More</span>
+                  <span className="text-[10px] font-bold uppercase tracking-widest">Citește Mai Mult</span>
                   <div className="w-8 h-px bg-current" />
                 </div>
               </div>

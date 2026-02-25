@@ -3,34 +3,34 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Check } from 'lucide-react';
 
 const pricingData = {
-  Recording: [
-    { name: 'Vocal Recording', price: '49', description: 'Professional vocal tracking with premium mics.' },
-    { name: 'Instrument Tracking', price: '59', description: 'High-fidelity capture of any instrument.' },
-    { name: 'Full Band Session', price: '349', description: 'Live tracking for the whole group.' },
-    { name: 'Podcast Recording', price: '39', description: 'Clean voice recording for your show.' },
-    { name: 'Voice Over', price: '45', description: 'Commercial grade voice recording.' },
-    { name: 'Location Recording', price: '499', description: 'We bring the studio to you.' },
+  Înregistrare: [
+    { name: 'Sesiune Vocală', price: '49', description: 'Înregistrare vocală profesională cu microfoane premium.' },
+    { name: 'Înregistrare Instrument', price: '59', description: 'Captură de înaltă fidelitate pentru orice instrument.' },
+    { name: 'Sesiune Band Complet', price: '349', description: 'Înregistrare live pentru întregul grup.' },
+    { name: 'Înregistrare Podcast', price: '39', description: 'Înregistrare vocală clară pentru emisiunea ta.' },
+    { name: 'Voice Over', price: '45', description: 'Înregistrare vocală de grad comercial.' },
+    { name: 'Înregistrare Locație', price: '499', description: 'Aducem studioul la tine.' },
   ],
-  Mixing: [
-    { name: 'Single Track Mix', price: '199', description: 'Complete mixdown of your song.' },
-    { name: 'EP Mixing Bundle', price: '749', description: 'Consistent sound for your EP.' },
-    { name: 'Album Mixing', price: '1499', description: 'Full album professional mixing.' },
-    { name: 'Stem Mixing', price: '299', description: 'Mixing from your grouped tracks.' },
-    { name: 'Vocal Tuning', price: '79', description: 'Perfect pitch and timing for vocals.' },
-    { name: 'Radio Edit', price: '49', description: 'Custom edit for radio play.' },
+  Mixaj: [
+    { name: 'Mixaj Piesă Single', price: '199', description: 'Mixaj complet al piesei tale.' },
+    { name: 'Pachet Mixaj EP', price: '749', description: 'Sunet consistent pentru EP-ul tău.' },
+    { name: 'Mixaj Album', price: '1499', description: 'Mixaj profesional pentru întregul album.' },
+    { name: 'Mixaj Stem-uri', price: '299', description: 'Mixaj din track-urile tale grupate.' },
+    { name: 'Corecție Vocală', price: '79', description: 'Pitch și timing perfect pentru voce.' },
+    { name: 'Editare Radio', price: '49', description: 'Editare personalizată pentru difuzare radio.' },
   ],
   Mastering: [
-    { name: 'Digital Mastering', price: '49', description: 'Ready for all streaming platforms.' },
-    { name: 'Analog Mastering', price: '89', description: 'Warmth and depth via analog gear.' },
-    { name: 'Stem Mastering', price: '149', description: 'More control over the final master.' },
-    { name: 'Album Mastering', price: '599', description: 'Cohesive sound for your project.' },
-    { name: 'Vinyl Pre-Master', price: '99', description: 'Optimized for vinyl pressing.' },
-    { name: 'DDP Image', price: '49', description: 'Standard format for CD production.' },
+    { name: 'Mastering Digital', price: '49', description: 'Gata pentru toate platformele de streaming.' },
+    { name: 'Mastering Analog', price: '89', description: 'Căldură și profunzime prin echipament analog.' },
+    { name: 'Mastering Stem-uri', price: '149', description: 'Mai mult control asupra masterului final.' },
+    { name: 'Mastering Album', price: '599', description: 'Sunet coeziv pentru proiectul tău.' },
+    { name: 'Pre-Master Vinil', price: '99', description: 'Optimizat pentru presare pe vinil.' },
+    { name: 'Imagine DDP', price: '49', description: 'Format standard pentru producția de CD-uri.' },
   ],
 };
 
 export default function Pricing() {
-  const [activeTab, setActiveTab] = useState<keyof typeof pricingData>('Recording');
+  const [activeTab, setActiveTab] = useState<keyof typeof pricingData>('Înregistrare');
 
   return (
     <section id="pricing" className="py-24 bg-studio-dark">
@@ -42,15 +42,15 @@ export default function Pricing() {
             viewport={{ once: true }}
             className="text-studio-accent font-bold uppercase tracking-[0.3em] text-xs block mb-4"
           >
-            Pricing Plans
+            Planuri de Prețuri
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-8xl font-display font-bold mb-12"
+            className="text-5xl md:text-8xl font-display font-bold mb-12 text-studio-text-light"
           >
-            STUDIO <span className="text-studio-accent">RATES</span>
+            TARIFE <span className="text-studio-accent">STUDIO</span>
           </motion.h2>
 
           {/* Tabs */}
@@ -95,12 +95,12 @@ export default function Pricing() {
                 className="group"
               >
                 <div className="flex items-end justify-between mb-2 gap-4">
-                  <h3 className="text-lg font-display font-bold uppercase tracking-wider group-hover:text-studio-accent transition-colors">
+                  <h3 className="text-lg font-display font-bold uppercase tracking-wider group-hover:text-studio-accent transition-colors text-studio-text-light">
                     {item.name}
                   </h3>
-                  <div className="flex-grow border-b border-dotted border-white/20 mb-1.5" />
+                  <div className="flex-grow border-b border-dotted border-white/10 mb-1.5" />
                   <span className="text-xl font-display font-bold text-studio-accent">
-                    ${item.price}
+                    {item.price}€
                   </span>
                 </div>
                 <p className="text-white/30 text-[10px] uppercase tracking-widest font-bold">
@@ -113,7 +113,7 @@ export default function Pricing() {
         
         <div className="mt-20 text-center">
           <button className="bg-studio-accent text-white px-12 py-5 rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-studio-accent transition-all">
-            Book Your Session
+            Rezervă Sesiunea Ta
           </button>
         </div>
       </div>

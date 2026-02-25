@@ -35,7 +35,7 @@ const records = [
 
 export default function RecentRecords() {
   return (
-    <section id="records" className="py-24 bg-studio-darker">
+    <section id="records" className="py-24 bg-studio-light-alt">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
           <div className="md:w-1/2">
@@ -45,15 +45,15 @@ export default function RecentRecords() {
               viewport={{ once: true }}
               className="text-studio-accent font-bold uppercase tracking-[0.3em] text-xs block mb-4"
             >
-              Latest Works
+              Cele Mai Noi Lucrări
             </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-5xl md:text-7xl font-display font-bold leading-tight"
+              className="text-5xl md:text-7xl font-display font-bold leading-tight text-studio-text"
             >
-              RECENT <span className="text-studio-accent">RECORDS</span>
+              ÎNREGISTRĂRI <span className="text-studio-accent">RECENTE</span>
             </motion.h2>
           </div>
           <motion.div
@@ -62,8 +62,8 @@ export default function RecentRecords() {
             viewport={{ once: true }}
             className="md:w-1/3"
           >
-            <p className="text-white/40 text-sm font-medium uppercase tracking-widest leading-relaxed">
-              Check out some of the latest tracks recorded and produced right here at Recond Studio.
+            <p className="text-studio-text/40 text-sm font-medium uppercase tracking-widest leading-relaxed">
+              Ascultă câteva dintre cele mai recente piese înregistrate și produse chiar aici la ProArt Studio.
             </p>
           </motion.div>
         </div>
@@ -76,7 +76,7 @@ export default function RecentRecords() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group flex items-center gap-6 p-4 bg-studio-dark border border-white/5 hover:border-studio-accent/50 transition-all duration-300"
+              className="group flex items-center gap-6 p-4 bg-studio-dark border border-black/5 hover:border-studio-accent/50 transition-all duration-300"
             >
               <div className="relative w-16 h-16 shrink-0 overflow-hidden rounded-sm">
                 <img src={record.image} alt={record.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
@@ -87,7 +87,7 @@ export default function RecentRecords() {
 
               <div className="flex-grow grid grid-cols-1 md:grid-cols-3 items-center gap-4">
                 <div>
-                  <h4 className="text-lg font-display font-bold group-hover:text-studio-accent transition-colors">{record.title}</h4>
+                  <h4 className="text-lg font-display font-bold group-hover:text-studio-accent transition-colors text-studio-text-light">{record.title}</h4>
                   <p className="text-white/40 text-[10px] uppercase tracking-widest font-bold">{record.artist}</p>
                 </div>
                 
@@ -99,8 +99,8 @@ export default function RecentRecords() {
                   <button className="p-2 text-white/40 hover:text-studio-accent transition-colors">
                     <ShoppingCart size={18} />
                   </button>
-                  <button className="border border-white/10 px-6 py-2 text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-studio-accent transition-all">
-                    Details
+                  <button className="border border-white/10 px-6 py-2 text-[10px] font-bold uppercase tracking-widest hover:bg-studio-accent hover:text-white transition-all text-white">
+                    Detalii
                   </button>
                 </div>
               </div>
@@ -109,8 +109,8 @@ export default function RecentRecords() {
         </div>
         
         <div className="mt-16 text-center">
-          <button className="bg-studio-accent text-white px-12 py-5 rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-studio-accent transition-all">
-            View All Records
+          <button className="bg-studio-accent text-white px-12 py-5 rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-studio-text transition-all">
+            Vezi Toate Înregistrările
           </button>
         </div>
       </div>
