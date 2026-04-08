@@ -75,7 +75,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="mb-4"
             >
-              <span className="text-studio-accent font-bold uppercase tracking-[0.4em] text-xs bg-studio-accent px-4 py-2 rounded-sm">
+              <span className="text-white font-bold uppercase tracking-[0.4em] text-xs bg-studio-accent px-4 py-2 rounded-sm">
                 {slides[currentSlide].subtitle}
               </span>
             </motion.div>
