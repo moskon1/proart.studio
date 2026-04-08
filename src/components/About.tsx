@@ -14,7 +14,7 @@ export default function About() {
           >
             <div className="relative z-10 rounded-sm overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=1000"
+                src="/about.jpg"
                 alt="Sesiune Studio"
                 className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
