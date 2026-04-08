@@ -35,10 +35,8 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="home" smooth={true} className="flex items-center gap-2 cursor-pointer group">
-          <div className="w-10 h-10 bg-studio-accent rounded-sm flex items-center justify-center transform group-hover:rotate-12 transition-transform">
-            <Music className="text-white w-6 h-6" />
-          </div>
-          <span className="text-3xl font-display font-bold tracking-widest uppercase text-studio-text">ProArt</span>
+       
+          <span className="text-3xl font-display text-white font-bold tracking-widest uppercase text-studio-text">ProArt</span>
         </Link>
 
         {/* Desktop Nav */}
