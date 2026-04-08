@@ -4,19 +4,19 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const slides = [
   {
-    image: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=2000',
+    image: '/hero1.jpg',
     subtitle: 'Studio de Înregistrări Profesional',
     title: 'PROART <br /> <span class="text-studio-accent">STUDIO</span>',
     description: 'Cel mai bun loc pentru producția muzicală, mixaj și mastering.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=2000',
+    image: '/hero2.jpg',
     subtitle: 'Echipament de Înaltă Calitate',
     title: 'SUFLET <br /> <span class="text-studio-accent">ANALOG</span>',
     description: 'Experimentează căldura echipamentului vintage combinată cu precizia modernă.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&q=80&w=2000',
+    image: '/hero3.jpg',
     subtitle: 'Atmosferă Creativă',
     title: 'SUNETUL <br /> <span class="text-studio-accent">TĂU</span>',
     description: 'Un spațiu conceput pentru a inspira și a surprinde identitatea ta muzicală unică.',
