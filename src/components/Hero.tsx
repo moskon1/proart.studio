@@ -92,7 +92,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-sm md:text-base text-studio-text/70 max-w-xl mx-auto mb-10 font-medium uppercase tracking-[0.2em] leading-relaxed"
+              className="text-sm md:text-base text-white max-w-xl mx-auto mb-10 font-medium uppercase tracking-[0.2em] leading-relaxed"
             >
               {slides[currentSlide].description}
             </motion.p>
