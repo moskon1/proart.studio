@@ -50,7 +50,7 @@ export default function Navbar() {
               smooth={true}
               spy={true}
               activeClass="text-studio-accent"
-              className="relative text-xs font-bold uppercase tracking-[0.2em] text-studio-text/70 hover:text-studio-accent transition-colors cursor-pointer group/link"
+              className="relative text-xs font-bold uppercase tracking-[0.2em] text-white text-studio-text/70 hover:text-studio-accent transition-colors cursor-pointer group/link"
             >
               {item.name}
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-studio-accent transition-all duration-300 group-hover/link:w-full" />
