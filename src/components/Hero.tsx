@@ -9,18 +9,19 @@ const slides = [
     title: 'PROART <br /> <span class="text-studio-accent">STUDIO</span>',
     description: 'Cel mai bun loc pentru producția muzicală, mixaj și mastering.',
   },
-  {
-    image: '/hero2.jpg',
-    subtitle: 'Echipament de Înaltă Calitate',
-    title: 'SUFLET <br /> <span class="text-studio-accent">ANALOG</span>',
-    description: 'Experimentează căldura echipamentului vintage combinată cu precizia modernă.',
-  },
-  {
+    {
     image: '/hero3.jpg',
     subtitle: 'Atmosferă Creativă',
     title: 'SUNETUL <br /> <span class="text-studio-accent">TĂU</span>',
     description: 'Un spațiu conceput pentru a inspira și a surprinde identitatea ta muzicală unică.',
   },
+  {
+    image: '/hero2.jpg',
+    subtitle: 'Spatiu Educativ',
+    title: 'INVETI <br /> <span class="text-studio-accent">EXPERIMENTEZI</span>',
+    description: 'Nu suntem doar un spațiu de lucru, suntem un loc unde îți poți atinge întregul potențial creativ.',
+  },
+
 ];
 
 export default function Hero() {

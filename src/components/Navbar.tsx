@@ -26,6 +26,13 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <nav
       className={cn(
@@ -35,8 +42,12 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="home" smooth={true} className="flex items-center gap-2 cursor-pointer group">
-       
-          <span className="text-3xl font-display text-white font-bold tracking-widest uppercase text-studio-text">ProArt</span>
+          <span className={cn(
+            "text-3xl font-display font-bold tracking-widest uppercase transition-colors",
+            isScrolled ? "text-black" : "text-white"
+          )}>
+            ProArt
+          </span>
         </Link>
 
         {/* Desktop Nav */}
@@ -47,14 +58,20 @@ export default function Navbar() {
               to={item.to}
               smooth={true}
               spy={true}
-              activeClass="text-studio-accent"
-              className="relative text-xs font-bold uppercase tracking-[0.2em] text-white text-studio-text/70 hover:text-studio-accent transition-colors cursor-pointer group/link"
+              activeClass={isScrolled ? "text-studio-accent" : "text-studio-accent"}
+              className={cn(
+                'relative text-xs font-bold uppercase tracking-[0.2em] transition-colors cursor-pointer group/link',
+                isScrolled ? 'text-black/70 hover:text-studio-accent' : 'text-white/70 hover:text-studio-accent'
+              )}
             >
               {item.name}
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-studio-accent transition-all duration-300 group-hover/link:w-full" />
             </Link>
           ))}
-          <button className="group relative bg-studio-accent text-white px-8 py-3 rounded-sm text-xs font-bold uppercase tracking-widest overflow-hidden transition-all">
+          <button 
+            onClick={scrollToContact}
+            className="group relative bg-studio-accent text-white px-8 py-3 rounded-sm text-xs font-bold uppercase tracking-widest overflow-hidden transition-all"
+          >
             <span className="relative z-10 transition-colors group-hover:text-studio-accent">Rezervă Sesiune</span>
             <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
           </button>
@@ -62,7 +79,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-studio-text"
+          className={cn("md:hidden transition-colors", isScrolled ? "text-black" : "text-white")}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -84,12 +101,18 @@ export default function Navbar() {
                 to={item.to}
                 smooth={true}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-sm font-bold uppercase tracking-widest hover:text-studio-accent transition-colors text-studio-text"
+                className="text-sm font-bold uppercase tracking-widest hover:text-studio-accent transition-colors text-black"
               >
                 {item.name}
               </Link>
             ))}
-            <button className="bg-studio-accent text-white px-6 py-4 rounded-sm text-xs font-bold uppercase tracking-widest w-full">
+            <button
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                scrollToContact();
+              }} 
+              className="bg-studio-accent text-white px-6 py-4 rounded-sm text-xs font-bold uppercase tracking-widest w-full"
+            >
               Rezervă Sesiune
             </button>
           </motion.div>

@@ -26,24 +26,17 @@ const artists = [
 
 export default function Artists() {
   return (
-    <section id="artists" className="py-24 bg-studio-light-alt">
+    <section id="artists" className="py-24 bg-studio-dark">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
-          <motion.span
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-studio-accent font-bold uppercase tracking-[0.3em] text-xs block mb-4"
-          >
-            Portofoliul Nostru
-          </motion.span>
+ 
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-8xl font-display font-bold text-studio-text"
+            className="text-5xl md:text-8xl font-display font-bold text-white"
           >
-            ARTIȘTII <span className="text-studio-accent">NOȘTRI</span>
+            ECHIPA <span className="text-studio-accent">NOASTRA</span>
           </motion.h2>
         </div>
 

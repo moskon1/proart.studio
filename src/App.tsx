@@ -17,10 +17,10 @@ export default function App() {
       <main>
         <Hero />
         <Services />
-        <RecentRecords />
-        <About />
+        {/* <RecentRecords /> */}
+             <Pricing /> 
         <Equipment />
-        <Pricing />
+  <About />
         <Artists />
         <Contact />
       </main>

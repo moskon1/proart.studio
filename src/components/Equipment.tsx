@@ -10,7 +10,7 @@ const equipment = [
 
 export default function Equipment() {
   return (
-    <section id="equipment" className="py-24 bg-studio-light">
+    <section id="equipment" className="py-24 bg-studio-dark">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-20">
           <div className="lg:w-1/2">
@@ -26,11 +26,11 @@ export default function Equipment() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-5xl md:text-8xl font-display font-bold mb-8 leading-tight text-studio-text"
+              className="text-5xl md:text-8xl text-white font-display font-bold mb-8 leading-tight text-studio-text"
             >
               ECHIPAMENT <br /> <span className="text-studio-accent">STUDIO</span>
             </motion.h2>
-            <p className="text-studio-text/50 font-medium uppercase tracking-widest text-sm leading-relaxed mb-10">
+            <p className="text-studio-text/50 text-white font-medium uppercase tracking-widest text-sm leading-relaxed mb-10">
               Folosim doar cel mai bun echipament pentru a ne asigura că sunetul tău este captat cu precizie absolută și caracter.
             </p>
             
@@ -62,7 +62,7 @@ export default function Equipment() {
                   <ul className="space-y-4">
                     {group.items.map((item) => (
                       <li key={item} className="flex items-center gap-3 group cursor-default">
-                        <span className="text-studio-text/70 font-bold uppercase tracking-widest text-[10px] group-hover:text-studio-accent transition-colors">
+                        <span className="text-studio-text/70 text-white font-bold uppercase tracking-widest text-[10px] group-hover:text-studio-accent transition-colors">
                           {item}
                         </span>
                       </li>

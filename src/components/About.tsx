@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-studio-darker overflow-hidden">
+    <section id="about" className="py-24 bg-studio-dark overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <motion.div
@@ -58,9 +58,7 @@ export default function About() {
                 <p className="text-white/40 text-sm">Hardware vintage pentru acel sunet cald clasic.</p>
               </div>
             </div>
-            <button className="border-b-2 border-studio-accent pb-2 text-xs font-bold uppercase tracking-widest text-white hover:text-studio-accent transition-colors">
-              Află Mai Multe Despre Noi
-            </button>
+    
           </motion.div>
         </div>
       </div>
