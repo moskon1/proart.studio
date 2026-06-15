@@ -72,9 +72,7 @@ export default function Equipment() {
               ))}
             </div>
             
-            <button className="mt-16 bg-studio-accent text-white px-10 py-5 rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-studio-text transition-all self-start">
-              Lista Completă de Echipamente
-            </button>
+        
           </div>
         </div>
       </div>
