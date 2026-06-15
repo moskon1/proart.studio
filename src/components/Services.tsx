@@ -342,32 +342,32 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="min-w-full md:min-w-[50%] lg:min-w-[33.333%] snap-start group p-12 bg-studio-dark border border-white/5 transition-all duration-500 relative overflow-hidden cursor-pointer"
+                className="min-w-full md:min-w-[50%] lg:min-w-[33.333%] snap-start group p-8 md:p-12 bg-studio-dark border border-white/5 transition-all duration-500 relative overflow-hidden cursor-pointer"
               >
                 {/* Hover Background Fill */}
                 <div className="absolute inset-0 bg-studio-accent translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" />
                 
                 <div className="relative z-10">
-                  <div className="w-16 h-16 bg-studio-gray/10 rounded-sm flex items-center justify-center mb-8 group-hover:bg-white transition-colors duration-500">
-                    <service.icon className="text-studio-accent group-hover:text-studio-accent w-8 h-8 transition-colors duration-500" />
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-studio-gray/10 rounded-sm flex items-center justify-center mb-6 md:mb-8 group-hover:bg-white transition-colors duration-500">
+                    <service.icon className="text-studio-accent group-hover:text-studio-accent w-6 h-6 md:w-8 md:h-8 transition-colors duration-500" />
                   </div>
-                  <h3 className="text-3xl font-display font-bold mb-4 group-hover:text-white transition-colors duration-500 text-studio-text-light">
+                  <h3 className="text-2xl md:text-3xl font-display font-bold mb-3 md:mb-4 group-hover:text-white transition-colors duration-500 text-studio-text-light">
                     {service.title}
                   </h3>
-                  <p className="text-white/40 group-hover:text-white/80 leading-relaxed font-medium text-sm uppercase tracking-wider transition-colors duration-500">
+                  <p className="text-white/40 group-hover:text-white/80 leading-relaxed font-medium text-xs md:text-sm uppercase tracking-wider transition-colors duration-500">
                     {service.description}
                   </p>
                   
                   <button 
                     onClick={() => openModal(service)}
-                    className="mt-8 flex items-center gap-2 text-studio-accent group-hover:text-white transition-colors duration-500"
+                    className="mt-6 md:mt-8 flex items-center gap-2 text-studio-accent group-hover:text-white transition-colors duration-500"
                   >
                     <span className="text-[10px] font-bold uppercase tracking-widest">Citește Mai Mult</span>
-                    <div className="w-8 h-px bg-current" />
+                    <div className="w-6 md:w-8 h-px bg-current" />
                   </button>
                 </div>
                 
-                <div className="absolute -bottom-10 -right-10 text-white/5 font-display text-9xl transform group-hover:scale-110 group-hover:text-white/10 transition-all duration-700">
+                <div className="absolute -bottom-10 -right-10 text-white/5 font-display text-7xl md:text-9xl transform group-hover:scale-110 group-hover:text-white/10 transition-all duration-700">
                   0{index + 1}
                 </div>
               </motion.div>
@@ -376,171 +376,170 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Modal */}
-<AnimatePresence>
-  {isModalOpen && selectedService && (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      onClick={closeModal}
-      className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto"
-    >
-      <motion.div
-        initial={{ scale: 0.9, opacity: 0, y: 50 }}
-        animate={{ scale: 1, opacity: 1, y: 0 }}
-        exit={{ scale: 0.9, opacity: 0, y: 50 }}
-        transition={{ type: "spring", damping: 25, stiffness: 300 }}
-        onClick={(e) => e.stopPropagation()}
-        className="relative max-w-4xl w-full bg-studio-dark border border-white/10 rounded-2xl overflow-hidden max-h-[90vh] overflow-y-auto scrollbar-hide"
-        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-      >
-        {/* Rest of your modal content remains the same */}
-        
-        {/* Header with gradient background */}
-        <div className="relative bg-gradient-to-br from-studio-accent/20 to-transparent p-8 border-b border-white/10">
-          <button
+      {/* Modal - Mobile Responsive */}
+      <AnimatePresence>
+        {isModalOpen && selectedService && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             onClick={closeModal}
-            className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-studio-accent transition-all flex items-center justify-center group"
+            className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-2 md:p-4 overflow-y-auto"
           >
-            <X size={20} className="text-white group-hover:text-white" />
-          </button>
-          
-          <div className="flex items-start gap-6">
-            <div className="w-20 h-20 bg-studio-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
-              <selectedService.icon className="text-studio-accent w-10 h-10" />
-            </div>
-            <div>
-              <h3 className="text-4xl md:text-5xl font-display font-bold text-studio-text-light mb-3">
-                {selectedService.title}
-              </h3>
-              <p className="text-white/60 text-sm uppercase tracking-wider">
-                {selectedService.description}
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Content - keep this structure exactly as you had it */}
-        <div className="p-8 space-y-8">
-          {/* Detailed Description */}
-          <div>
-            <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-studio-accent mb-3">
-              Despre Serviciu
-            </h4>
-            <div className="text-white/70 leading-relaxed whitespace-pre-line">
-              {selectedService.detailedDescription}
-            </div>
-          </div>
-
-          {/* Pricing Section */}
-          {/* <div>
-            <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-studio-accent mb-4 flex items-center gap-2">
-              <Award size={16} />
-              Prețuri {selectedService.title}
-            </h4>
-            
-            {selectedService.getDetailedPricing() ? (
-              <div className="space-y-3">
-                <div className="bg-studio-accent/10 border border-studio-accent/20 rounded-lg p-4 mb-4">
-                  <div className="text-center">
-                    <div className="text-xs text-white/40 uppercase tracking-wider mb-1">Preț de pornire</div>
-                    <div className="text-3xl font-display font-bold text-studio-accent">
-                      {selectedService.getDetailedPricing()?.startingPrice}
-                    </div>
-                    <div className="text-xs text-white/30 mt-1">{selectedService.getDetailedPricing()?.priceRange}</div>
-                  </div>
-                </div>
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0, y: 50 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 50 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative w-full max-w-4xl bg-studio-dark border border-white/10 rounded-2xl overflow-hidden max-h-[95vh] md:max-h-[90vh] overflow-y-auto scrollbar-hide"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              {/* Header with gradient background - Mobile Optimized */}
+              <div className="relative bg-gradient-to-br from-studio-accent/20 to-transparent p-4 md:p-8 border-b border-white/10">
+                <button
+                  onClick={closeModal}
+                  className="absolute top-3 right-3 md:top-4 md:right-4 w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/10 hover:bg-studio-accent transition-all flex items-center justify-center group z-10"
+                >
+                  <X size={18} className="text-white md:w-5 md:h-5" />
+                </button>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                  {selectedService.getDetailedPricing()?.priceDetails.map((item, idx) => (
-                    <div key={idx} className="flex justify-between items-center p-3 bg-white/5 rounded-lg border border-white/10">
-                      <span className="text-white/70 text-sm">{item.name}</span>
-                      <span className="text-studio-accent font-bold">{item.price}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ) : (
-              <div className="bg-white/5 rounded-lg p-4">
-                <div className="text-center">
-                  <div className="text-2xl font-display font-bold text-studio-accent mb-1">
-                    {selectedService.getPrice()}
+                <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6">
+                  <div className="w-14 h-14 md:w-20 md:h-20 bg-studio-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <selectedService.icon className="text-studio-accent w-7 h-7 md:w-10 md:h-10" />
                   </div>
-                  <p className="text-xs text-white/40">Contactați-ne pentru o ofertă personalizată</p>
+                  <div>
+                    <h3 className="text-2xl md:text-4xl lg:text-5xl font-display font-bold text-studio-text-light mb-2 md:mb-3">
+                      {selectedService.title}
+                    </h3>
+                    <p className="text-white/60 text-xs md:text-sm uppercase tracking-wider">
+                      {selectedService.description}
+                    </p>
+                  </div>
                 </div>
               </div>
-            )}
-          </div> */}
 
-          {/* Includes */}
-          <div>
-            <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-studio-accent mb-4 flex items-center gap-2">
-              <CheckCircle2 size={16} />
-              Ce Include
-            </h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              {selectedService.includes.map((item, idx) => (
-                <div key={idx} className="flex items-center gap-2 text-white/60 text-sm">
-                  <div className="w-1.5 h-1.5 rounded-full bg-studio-accent" />
-                  <span>{item}</span>
+              {/* Content - Mobile Optimized */}
+              <div className="p-4 md:p-8 space-y-6 md:space-y-8">
+                {/* Detailed Description */}
+                <div>
+                  <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-studio-accent mb-3">
+                    Despre Serviciu
+                  </h4>
+                  <div className="text-white/70 leading-relaxed whitespace-pre-line text-sm md:text-base">
+                    {selectedService.detailedDescription}
+                  </div>
                 </div>
-              ))}
-            </div>
-          </div>
 
-          {/* Quick Info Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-white/10">
-            <div className="bg-white/5 p-4 rounded-lg">
-              <Clock size={18} className="text-studio-accent mb-2" />
-              <div className="text-xs text-white/40 uppercase tracking-wider mb-1">Durată Estimativă</div>
-              <div className="text-white font-medium">{selectedService.duration}</div>
-            </div>
-            <div className="bg-white/5 p-4 rounded-lg">
-              <Users size={18} className="text-studio-accent mb-2" />
-              <div className="text-xs text-white/40 uppercase tracking-wider mb-1">Potrivit Pentru</div>
-              <div className="text-white font-medium">{selectedService.features.slice(0, 2).join(', ')}</div>
-            </div>
-          </div>
+                {/* Pricing Section - Commented out as requested */}
+                {/* <div>
+                  <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-studio-accent mb-4 flex items-center gap-2">
+                    <Award size={16} />
+                    Prețuri {selectedService.title}
+                  </h4>
+                  
+                  {selectedService.getDetailedPricing() ? (
+                    <div className="space-y-3">
+                      <div className="bg-studio-accent/10 border border-studio-accent/20 rounded-lg p-4 mb-4">
+                        <div className="text-center">
+                          <div className="text-xs text-white/40 uppercase tracking-wider mb-1">Preț de pornire</div>
+                          <div className="text-2xl md:text-3xl font-display font-bold text-studio-accent">
+                            {selectedService.getDetailedPricing()?.startingPrice}
+                          </div>
+                          <div className="text-xs text-white/30 mt-1">{selectedService.getDetailedPricing()?.priceRange}</div>
+                        </div>
+                      </div>
+                      
+                      <div className="grid grid-cols-1 gap-2">
+                        {selectedService.getDetailedPricing()?.priceDetails.map((item, idx) => (
+                          <div key={idx} className="flex justify-between items-center p-3 bg-white/5 rounded-lg border border-white/10">
+                            <span className="text-white/70 text-xs md:text-sm">{item.name}</span>
+                            <span className="text-studio-accent font-bold text-sm md:text-base">{item.price}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="bg-white/5 rounded-lg p-4">
+                      <div className="text-center">
+                        <div className="text-xl md:text-2xl font-display font-bold text-studio-accent mb-1">
+                          {selectedService.getPrice()}
+                        </div>
+                        <p className="text-xs text-white/40">Contactați-ne pentru o ofertă personalizată</p>
+                      </div>
+                    </div>
+                  )}
+                </div> */}
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <button
-              onClick={closeModal}
-              className="flex-1 bg-studio-accent text-white px-6 py-3 rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-studio-accent transition-all"
-            >
-              Închide
-            </button>
-            <button
-              onClick={() => {
-                closeModal();
-                const pricingSection = document.getElementById('pricing');
-                if (pricingSection) {
-                  pricingSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              className="flex-1 border border-studio-accent text-studio-accent px-6 py-3 rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-studio-accent hover:text-white transition-all"
-            >
-              Vezi Toate Prețurile
-            </button>
-          </div>
-        </div>
-      </motion.div>
-    </motion.div>
-  )}
-</AnimatePresence>
-<style>{`
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
-`}</style>
+                {/* Includes */}
+                <div>
+                  <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-studio-accent mb-4 flex items-center gap-2">
+                    <CheckCircle2 size={16} />
+                    Ce Include
+                  </h4>
+                  <div className="grid grid-cols-1 gap-2 md:gap-3">
+                    {selectedService.includes.map((item, idx) => (
+                      <div key={idx} className="flex items-start gap-2 text-white/60 text-xs md:text-sm">
+                        <div className="w-1.5 h-1.5 rounded-full bg-studio-accent mt-1.5 flex-shrink-0" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Quick Info Cards - Mobile Optimized */}
+                <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4 pt-4 border-t border-white/10">
+                  <div className="bg-white/5 p-3 md:p-4 rounded-lg">
+                    <Clock size={16} className="text-studio-accent mb-2 md:w-[18px] md:h-[18px]" />
+                    <div className="text-[10px] md:text-xs text-white/40 uppercase tracking-wider mb-1">Durată Estimativă</div>
+                    <div className="text-white font-medium text-sm md:text-base">{selectedService.duration}</div>
+                  </div>
+                  <div className="bg-white/5 p-3 md:p-4 rounded-lg">
+                    <Users size={16} className="text-studio-accent mb-2 md:w-[18px] md:h-[18px]" />
+                    <div className="text-[10px] md:text-xs text-white/40 uppercase tracking-wider mb-1">Potrivit Pentru</div>
+                    <div className="text-white font-medium text-sm md:text-base">{selectedService.features.slice(0, 2).join(', ')}</div>
+                  </div>
+                </div>
+
+                {/* CTA Buttons - Mobile Optimized */}
+                <div className="flex flex-col gap-3 md:flex-row md:gap-4 pt-4">
+                  <button
+                    onClick={closeModal}
+                    className="w-full md:flex-1 bg-studio-accent text-white px-4 md:px-6 py-3 rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-studio-accent transition-all"
+                  >
+                    Închide
+                  </button>
+                  <button
+                    onClick={() => {
+                      closeModal();
+                      const pricingSection = document.getElementById('pricing');
+                      if (pricingSection) {
+                        pricingSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                    className="w-full md:flex-1 border border-studio-accent text-studio-accent px-4 md:px-6 py-3 rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-studio-accent hover:text-white transition-all"
+                  >
+                    Vezi Toate Prețurile
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      
+      <style>{`
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </>
   );
 }
