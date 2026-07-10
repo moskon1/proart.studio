@@ -3,25 +3,8 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Check, Sparkles, Star, Crown, Sliders } from 'lucide-react';
 
 const pricingData = {
-  Înregistrare: [
-    { name: 'Înregistrare Voce/Instrument', price: '30', description: 'Înregistrare vocală/instrumentala profesională cu microfoane premium.' },
-    { name: 'Înregistrare Podcast', price: '30', description: 'Înregistrare vocală clară pentru emisiunea ta.' },
-    { name: 'Înregistrare', price: '50', description: 'Înregistrare live pentru întregul grup.' },
-    { name: 'Înregistrare Locație', price: '100', description: 'Aducem studioul la tine.' },
-    { name: 'Voice Over', price: '30', description: 'Înregistrare vocală de grad comercial.' },
-  ],
-  Mixaj: [
-    { name: 'Mixaj Piesă Single', price: '50', description: 'Mixaj complet al piesei tale.' },
-    { name: 'Mixaj Stem-uri', price: '100', description: 'Mixaj din track-urile tale grupate.' },
-    { name: 'Corecție Vocală', price: '50', description: 'Pitch și timing perfect pentru voce.' },
-    { name: 'Editare Radio', price: '30', description: 'Editare personalizată pentru difuzare radio.' },
-  ],
-  Mastering: [
-    { name: 'Mastering Digital', price: '30', description: 'Gata pentru toate platformele de streaming.' },
-    { name: 'Mastering Stem-uri', price: '70', description: 'Mai mult control asupra masterului final.' },
-    { name: 'Pre-Master Vinil', price: '50', description: 'Optimizat pentru presare pe vinil.' },
-  ],
-  Premium: [
+
+    Premium: [
     {
       name: 'Pachet Standard',
       price: '100',
@@ -90,11 +73,30 @@ const pricingData = {
       borderColor: 'border-studio-accent/30',
       accentColor: 'text-studio-accent'
     }
+  ],
+  Înregistrare: [
+    { name: 'Înregistrare Voce/Instrument', price: '50', description: 'Înregistrare vocală/instrumentala profesională cu microfoane premium.' },
+    { name: 'Înregistrare Podcast', price: '50', description: 'Înregistrare vocală clară pentru emisiunea ta.' },
+    { name: 'Înregistrare Grup', price: '70', description: 'Înregistrare live pentru întregul grup.' },
+    { name: 'Înregistrare Locație', price: '100', description: 'Aducem studioul la tine.' },
+    { name: 'Voice Over', price: '50', description: 'Înregistrare vocală de grad comercial.' },
+  ],
+  Mixaj: [
+    { name: 'Mixaj Piesă Single', price: '50', description: 'Mixaj complet al piesei tale.' },
+    { name: 'Mixaj Stem-uri', price: '100', description: 'Mixaj din track-urile tale grupate.' },
+    { name: 'Corecție Vocală', price: '50', description: 'Pitch și timing perfect pentru voce.' },
+    { name: 'Editare Radio', price: '50', description: 'Editare personalizată pentru difuzare radio.' },
+  ],
+  Mastering: [
+    { name: 'Mastering Digital', price: '30', description: 'Gata pentru toate platformele de streaming.' },
+    { name: 'Mastering Stem-uri', price: '70', description: 'Mai mult control asupra masterului final.' },
+    { name: 'Pre-Master Vinil', price: '50', description: 'Optimizat pentru presare pe vinil.' },
   ]
+
 };
 
 export default function Pricing() {
-  const [activeTab, setActiveTab] = useState<keyof typeof pricingData>('Înregistrare');
+  const [activeTab, setActiveTab] = useState<keyof typeof pricingData>('Premium');
 
   return (
     <section id="pricing" className="py-24 bg-studio-dark">

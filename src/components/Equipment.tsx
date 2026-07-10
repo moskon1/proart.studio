@@ -2,10 +2,11 @@ import React from 'react';
 import { motion } from 'motion/react';
 
 const equipment = [
-  { category: 'Console', items: ['SSL 4000G+ 48 Canale', 'Neve 88RS 60 Canale', 'Avid S6 M40'] },
-  { category: 'Microfoane', items: ['Neumann U87 Ai', 'AKG C12 VR', 'Shure SM7B', 'Sennheiser MD421'] },
-  { category: 'Outboard', items: ['Universal Audio 1176LN', 'Teletronix LA-2A', 'Neve 1073 Preamp'] },
-  { category: 'Monitorizare', items: ['ATC SCM25A Pro', 'Yamaha NS-10M', 'Genelec 8351B'] },
+  { category: 'Monitorizare', items: ['ADAM A77X', 'RME OCTAMIC XTC', 'SSL 24', 'BEYERDYNAMIC DT 770 PRO x 5', 'BEYERDYNAMIC DT 990 PRO 2500HM', 'MAKIE HM-800', 'BEHRINGER ULTRAGAING DIGITAL'] },
+  { category: 'Microfoane', items: ['NEUMANN TLM 103', 'OKTAVA MK 012 MSP x 2', 'SHURE BETA 91A', 'SHURE SM57 x 2', 'SENNHEISER E604 x 3', 'SE ELECTRONICS X15 STUDIO BUNDLE'] },
+  { category: 'Instrumente Muzicale si Control MIDI', items: ['ICON QCON PRO X', 'ABLETON PUSH 3', 'PEARL ROADSHOW STUDIO JET BLACK', 'ZULTAN 22" Q RIDE', 'CONGA LP A647-SW 11"-12"', 'LP 1428NY BLACK BOX CAJON', 'LP 1209+ JAM BLOCK GUIRO', 'TERRE DJEMBE 60CM', 'LP 249 CUBAN GUIRO', 'STUDIO 49 RC 2 PALISANDER CLAVES ROYAL', 'ZULTAN 10" SPLASH DARK MATTER', 'YAMAHA YEV-104 NT ELECTRIC VIOLIN', 'M-AUDIO CODE 61 BLACK'] },
+  { category: 'Outboard', items: ['SPL GOLDMIKE 9844', 'VERMONA VSR 3.2', 'DRAWMEER MXPRO-30', 'TASCAM 12'] }
+  
 ];
 
 export default function Equipment() {

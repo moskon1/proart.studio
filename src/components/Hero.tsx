@@ -7,13 +7,13 @@ const slides = [
     image: '/hero1.jpg',
     subtitle: 'Studio de Înregistrări Profesional',
     title: 'PROART <br /> <span class="text-studio-accent">STUDIO</span>',
-    description: 'Cel mai bun loc pentru producția muzicală, mixaj și mastering.',
+    description: 'Locul tau pentru producția muzicală, mixaj și mastering in Ploiesti.',
   },
     {
     image: '/hero3.jpg',
     subtitle: 'Atmosferă Creativă',
     title: 'SUNETUL <br /> <span class="text-studio-accent">TĂU</span>',
-    description: 'Un spațiu conceput pentru a inspira și a surprinde identitatea ta muzicală unică.',
+    description: 'Un spațiu conceput pentru a inspira și a surprinde identitatea ta muzicală.',
   },
   {
     image: '/hero2.jpg',
