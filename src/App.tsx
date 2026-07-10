@@ -19,9 +19,10 @@ export default function App() {
         <Services />
         {/* <RecentRecords /> */}
              <Pricing /> 
+               <About />
         <Equipment />
-  <About />
-        <Artists />
+
+        {/* <Artists /> */}
         <Contact />
       </main>
       <Footer />
