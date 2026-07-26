@@ -57,16 +57,7 @@ export default function About() {
                 profesionist în care muzica ta poate prinde viață la cel mai înalt nivel.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-8 mb-10">
-              <div>
-                <h4 className="text-studio-accent font-display text-xl mb-2">Echipament Modern</h4>
-                <p className="text-white/40 text-sm">Cele mai noi instrumente digitale pentru o producție precisă.</p>
-              </div>
-              <div>
-                <h4 className="text-studio-accent font-display text-xl mb-2">Suflet Analog</h4>
-                <p className="text-white/40 text-sm">Hardware vintage pentru acel sunet cald clasic.</p>
-              </div>
-            </div>
+          
     
           </motion.div>
         </div>
