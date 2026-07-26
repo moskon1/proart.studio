@@ -53,7 +53,7 @@ export default function Navbar() {
             width="360"
             height="224"
             className={cn(
-              'h-12 md:h-14 w-auto object-contain transition-[filter] duration-300',
+              'h-14 md:h-16 w-auto object-contain transition-[filter] duration-300',
               isScrolled ? 'brightness-100' : 'brightness-0 invert'
             )}
           />
