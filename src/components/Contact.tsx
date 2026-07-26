@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Instagram, Twitter, Facebook, Send, MessageCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Facebook, Send, MessageCircle } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -67,8 +67,15 @@ export default function Contact() {
           </motion.div>
 
           <div className="flex gap-6 mt-16">
-            {[Instagram, Twitter, Facebook].map((Icon, i) => (
-              <a key={i} href="#" className="w-14 h-14 bg-studio-gray/10 flex items-center justify-center hover:bg-studio-accent hover:text-white transition-all group border border-white/5">
+            {[Instagram, Facebook].map((Icon, i) => (
+              <a
+                key={i}
+                href={i === 1 ? 'https://www.facebook.com/ProArtMusicRo' : 'https://www.instagram.com/proart.music.studio'}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={i === 1 ? 'ProArt Studio pe Facebook' : 'ProArt Studio pe Instagram'}
+                className="w-14 h-14 bg-studio-gray/10 flex items-center justify-center hover:bg-studio-accent hover:text-white transition-all group border border-white/5"
+              >
                 <Icon size={20} className="group-hover:scale-125 transition-transform text-white" />
               </a>
             ))}
