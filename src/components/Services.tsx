@@ -177,13 +177,12 @@ Folosim echipamente și tehnici moderne pentru a asigura un nivel optim de loudn
     description: 'Oferim servicii profesionale de înregistrare voice over pentru reclame, prezentări, audiobook-uri sau conținut online.',
     detailedDescription: `Oferim servicii profesionale de înregistrare voice over pentru reclame, prezentări, audiobook-uri sau conținut online. Asigurăm atât suport tehnic de înaltă calitate, cât și îndrumare pentru obținerea unei dicții clare, naturale și expresive, adaptate scopului proiectului.`,
     includes: [
-      'Cabine vocale izolate fonic',
-      'Microfoane dedicate voce (Neumann TLM 103)',
+      'Vocal Booth',
+      'Microfoan Neumann TLM 104',
       'Editare și curățare audio',
-      'Îndepărtare respirații și zgomote',
+      'Mixaj voce',
       'Pregătire pentru broadcast',
-      'Îndrumare pentru dicție și expresivitate',
-      'Multiple formate de livrare'
+      'Îndrumare pentru dicție și expresivitate'
     ],
     duration: '1-3 ore',
     features: ['Reclame radio/TV', 'Audiobook-uri', 'Prezentări corporate', 'Jocuri video']
