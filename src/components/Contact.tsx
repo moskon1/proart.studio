@@ -36,10 +36,15 @@ export default function Contact() {
             
             <div className="space-y-6">
               <h4 className="text-studio-accent font-display text-3xl">Rezervări</h4>
-              <p className="text-white/50 font-bold uppercase tracking-[0.2em] text-xs leading-relaxed">
-                hello@proartstudio.ro <br /> 
-                +40 722 123 456
-              </p>
+              <address className="text-white/50 not-italic font-bold uppercase tracking-[0.2em] text-xs leading-relaxed">
+                <a className="hover:text-studio-accent transition-colors" href="mailto:hello@proartstudio.ro">
+                  hello@proartstudio.ro
+                </a>
+                <br />
+                <a className="hover:text-studio-accent transition-colors" href="tel:+40722123456">
+                  +40 722 123 456
+                </a>
+              </address>
             </div>
           </div>
 

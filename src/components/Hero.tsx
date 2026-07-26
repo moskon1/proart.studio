@@ -7,7 +7,7 @@ const slides = [
     image: '/hero1.jpg',
     subtitle: 'Studio de Înregistrări Profesional',
     title: 'PROART <br /> <span class="text-studio-accent">STUDIO</span>',
-    description: 'Locul tau pentru producția muzicală, mixaj și mastering in Ploiesti.',
+    description: 'Studio de înregistrări în Ploiești pentru producție muzicală, mixaj și mastering.',
   },
     {
     image: '/hero3.jpg',
@@ -53,7 +53,7 @@ export default function Hero() {
             animate={{ scale: 1 }}
             transition={{ duration: 6 }}
             src={slides[currentSlide].image}
-            alt="Studio de Înregistrări"
+            alt="Studio de înregistrări ProArt din Ploiești"
             className="w-full h-full object-cover opacity-70"
             referrerPolicy="no-referrer"
           />

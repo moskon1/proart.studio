@@ -15,7 +15,7 @@ export default function About() {
             <div className="relative z-10 rounded-sm overflow-hidden">
               <img
                 src="/about.jpg"
-                alt="Sesiune Studio"
+                alt="Sesiune de înregistrări la ProArt Studio Ploiești"
                 className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
               />

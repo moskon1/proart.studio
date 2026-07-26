@@ -122,12 +122,11 @@ Oferim sfaturi profesionale adaptate fiecărui nivel de experiență, fie că e�
 Scopul nostru este să transformăm fiecare sesiune de înregistrare într-o experiență productivă, plăcută și valoroasă din punct de vedere artistic.`,
     includes: [
       'Studio acustic tratat profesional',
-      'Microfoane premium (Neumann, AKG, Shure)',
-      'Preamplificatoare de calitate studio',
+      'Microfoane premium',
+      'Preamplificare si conversie de cea mai buna calitate',
       'Monitorizare în timp real în căști profesionale',
       'Asistență tehnică din partea unui inginer de sunet',
-      'Servicii de vocal coaching în timpul sesiunii',
-      'Fișiere în format WAV 24-bit/96kHz'
+      'Servicii de vocal coaching în timpul sesiunii'
     ],
     duration: '2-4 ore per piesă',
     features: ['Vocale', 'Instrumente acustice', 'Tobe', 'Chitare', 'Piane', 'Copii (mediu prietenos)']
@@ -142,12 +141,12 @@ Pe lângă partea tehnică, oferim și feedback profesionist, acolo unde este ne
 
 Colaborarea și comunicarea sunt esențiale în acest proces, iar scopul nostru este să livrăm un produs final echilibrat, competitiv și pregătit pentru orice platformă de distribuție.`,
     includes: [
-      'Echilibrare volum și panning',
-      'Equalizare profesională',
+      'Volum și panning',
+      'Egalizare sunet',
       'Compresie și procesare dinamică',
       'Efecte (reverb, delay, modulație)',
-      'Automation pentru dinamică expresivă',
-      'Feedback profesionist și rafinare',
+      'Automatizare',
+      'Feedback',
       'Stem-uri grupate la cerere'
     ],
     duration: '2-5 ore per piesă',
@@ -162,12 +161,12 @@ Colaborarea și comunicarea sunt esențiale în acest proces, iar scopul nostru 
 Folosim echipamente și tehnici moderne pentru a asigura un nivel optim de loudness, păstrând în același timp dinamica și caracterul piesei. Fiecare proiect este tratat individual, cu respect pentru viziunea artistică și cu obiectivul de a obține un rezultat final competitiv pe piața actuală.`,
     includes: [
       'Corecție EQ finală',
-      'Compresie multibandă',
+      'Compresie',
       'Limitare și normalizare LUFS',
       'Optimizare pentru streaming (Spotify, Apple Music)',
       'Diferite formate (WAV, MP3, FLAC)',
-      'Verificare pe sisteme multiple de redare',
-      'Spațiu acustic tratat profesional'
+      'Verificare pe sisteme multiple de redare'
+
     ],
     duration: '1-2 ore per piesă',
     features: ['Single-uri', 'EP-uri', 'Albume', 'Platforme streaming']

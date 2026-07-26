@@ -9,6 +9,7 @@ import Pricing from './components/Pricing';
 import Artists from './components/Artists';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import LocalSeo from './components/LocalSeo';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <main>
         <Hero />
         <Services />
+        <LocalSeo />
         {/* <RecentRecords /> */}
              <Pricing /> 
                <About />
