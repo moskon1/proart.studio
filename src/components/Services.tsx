@@ -197,8 +197,8 @@ Folosim echipamente și tehnici moderne pentru a asigura un nivel optim de loudn
       'Design sonor și efecte',
       'Foley și înregistrări adiționale',
       'Sincronizare cu video',
-      'Ambianțe și atmosfere',
-      'Coloane sonore personalizate'
+      'Ambianța',
+      'Coloana sonora'
     ],
     duration: 'În funcție de proiect',
     features: ['Filme scurte', 'Documentare', 'Reclame', 'Conținut YouTube']
