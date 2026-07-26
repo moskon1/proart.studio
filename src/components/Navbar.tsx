@@ -41,13 +41,22 @@ export default function Navbar() {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link to="home" smooth={true} className="flex items-center gap-2 cursor-pointer group">
-          <span className={cn(
-            "text-3xl font-display font-bold tracking-widest uppercase transition-colors",
-            isScrolled ? "text-black" : "text-white"
-          )}>
-            ProArt
-          </span>
+        <Link
+          to="home"
+          smooth={true}
+          className="flex items-center cursor-pointer"
+          aria-label="ProArt Studio – Acasă"
+        >
+          <img
+            src="/logo.png"
+            alt="ProArt Studio"
+            width="360"
+            height="224"
+            className={cn(
+              'h-12 md:h-14 w-auto object-contain transition-[filter] duration-300',
+              isScrolled ? 'brightness-100' : 'brightness-0 invert'
+            )}
+          />
         </Link>
 
         {/* Desktop Nav */}
