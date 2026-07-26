@@ -210,15 +210,13 @@ Folosim echipamente și tehnici moderne pentru a asigura un nivel optim de loudn
     detailedDescription: `Te ajutăm să îți publici muzica pe principalele platforme de streaming, ocupându-ne de întregul proces — de la pregătirea materialelor, până la crearea și gestionarea conturilor necesare. Oferim suport pentru ca lansarea ta să fie simplă, corect realizată și aliniată standardelor industriei.`,
     includes: [
       'Distribuție pe 50+ platforme (Spotify, Apple Music, etc.)',
-      'Management metadate și ISRC codes',
-      'Optimizare playlisturi editoriale',
-      'Raportări lunare de streaming',
-      'Colectare redevențe',
-      'Creare și gestionare conturi',
+      'Optimizare playlisturi editoriale (la cerere)',
+      'Raportări lunare de streaming (la cerere)',
+      'Creare și gestionare conturi (la cerere)',
       'Asistență continuă'
     ],
-    duration: '3-5 zile lucrătoare',
-    features: ['Single-uri', 'EP-uri', 'Albume complete', 'Distribuție nelimitată']
+    duration: '3-15 zile lucrătoare',
+    features: ['Single', 'EP', 'Albume complete', 'Distribuție nelimitată']
   },
   {
     icon: Radio,
