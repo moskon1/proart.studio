@@ -41,8 +41,8 @@ export default function Contact() {
                   hello@proartstudio.ro
                 </a>
                 <br />
-                <a className="hover:text-studio-accent transition-colors" href="tel:+40722123456">
-                  +40 722 123 456
+                <a className="hover:text-studio-accent transition-colors" href="tel:+40720140462">
+                  +40 720 140 462
                 </a>
               </address>
             </div>
@@ -56,7 +56,7 @@ export default function Contact() {
           >
             <h4 className="text-studio-text-light font-display text-2xl uppercase tracking-widest">Rapid pe WhatsApp</h4>
             <a 
-              href="https://wa.me/40722123456" 
+              href="https://wa.me/40720140462" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-4 bg-[#25D366] text-white px-10 py-5 rounded-sm font-bold uppercase tracking-widest hover:scale-105 transition-transform w-full shadow-xl"
