@@ -120,7 +120,7 @@ export default function Hero() {
                 onClick={() => document.getElementById('equipment')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-black/5 backdrop-blur-sm text-studio-text px-12 py-5 rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-studio-accent hover:text-white transition-all border border-black/10"
               >
-                Echipamentul Nostru
+                Echipament
               </button>
             </motion.div>
           </motion.div>
