@@ -4,19 +4,19 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const slides = [
   {
-    image: '/hero1.jpg',
+    image: '/hero1.webp',
     subtitle: 'Studio de Înregistrări Profesional',
     title: 'PROART <br /> <span class="text-studio-accent">STUDIO</span>',
     description: 'Studio de înregistrări în Ploiești pentru producție muzicală, mixaj și mastering.',
   },
     {
-    image: '/hero3.jpg',
+    image: '/hero3.webp',
     subtitle: 'Atmosferă Creativă',
     title: 'SUNETUL <br /> <span class="text-studio-accent">TĂU</span>',
     description: 'Un spațiu conceput pentru a inspira și a surprinde identitatea ta muzicală.',
   },
   {
-    image: '/hero2.jpg',
+    image: '/hero2.webp',
     subtitle: 'Spatiu Educativ',
     title: 'INVETI <br /> <span class="text-studio-accent">EXPERIMENTEZI</span>',
     description: 'Nu suntem doar un spațiu de lucru, suntem un loc unde îți poți atinge întregul potențial creativ.',
