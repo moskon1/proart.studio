@@ -104,14 +104,22 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="flex flex-col sm:flex-row items-center justify-center gap-4"
             >
-              <button className="group relative bg-studio-accent text-white px-12 py-5 rounded-sm text-xs font-bold uppercase tracking-widest overflow-hidden transition-all">
-                <span className="relative z-10">Exploră Serviciile</span>
+              <button
+                type="button"
+                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+                className="group relative bg-studio-accent text-white px-12 py-5 rounded-sm text-xs font-bold uppercase tracking-widest overflow-hidden transition-all"
+              >
+                <span className="relative z-10">Servicii</span>
                 <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                 <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <span className="absolute inset-0 flex items-center justify-center text-studio-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">Exploră Serviciile</span>
+                <span className="absolute inset-0 flex items-center justify-center text-studio-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">Servicii</span>
               </button>
               
-              <button className="bg-black/5 backdrop-blur-sm text-studio-text px-12 py-5 rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-studio-accent hover:text-white transition-all border border-black/10">
+              <button
+                type="button"
+                onClick={() => document.getElementById('equipment')?.scrollIntoView({ behavior: 'smooth' })}
+                className="bg-black/5 backdrop-blur-sm text-studio-text px-12 py-5 rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-studio-accent hover:text-white transition-all border border-black/10"
+              >
                 Echipamentul Nostru
               </button>
             </motion.div>
