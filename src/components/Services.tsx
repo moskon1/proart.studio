@@ -169,7 +169,7 @@ Folosim echipamente și tehnici moderne pentru a asigura un nivel optim de loudn
 
     ],
     duration: '1-2 ore per piesă',
-    features: ['Single-uri', 'EP-uri', 'Albume', 'Platforme streaming']
+    features: ['Single', 'EP', 'Albume', 'Platforme streaming']
   },
   {
     icon: Music,
@@ -225,15 +225,13 @@ Folosim echipamente și tehnici moderne pentru a asigura un nivel optim de loudn
     detailedDescription: `Organizăm activități și sesiuni dedicate elevilor care doresc să descopere procesul de creare a sunetului și al muzicii. Acestea includ prezentări interactive și demonstrații practice, într-un mediu prietenos, menit să stimuleze curiozitatea și creativitatea.`,
     includes: [
       'Ateliere pentru școli și licee',
-      'Tabere de vară audio',
-      'Cursuri individuale de producție',
-      'Teoria sunetului și acustică',
+      'Curs conectica, signal flow si inregistrare',
       'Prezentări interactive',
       'Demonstrații practice',
       'Proiect final - prima piesă'
     ],
     duration: 'Program flexibil',
-    features: ['Grupe școlare', 'Studenți', 'Profesori', 'Workshop-uri corporate']
+    features: ['Grupe școlare', 'Studenți', 'Profesori', 'Workshop corporate']
   },
   {
     icon: Headphones,
@@ -243,14 +241,14 @@ Folosim echipamente și tehnici moderne pentru a asigura un nivel optim de loudn
     includes: [
       'Analiză acustică profesională',
       'Raport detaliat cu soluții',
-      'Furnizare materiale premium (panouri, basstraps)',
+      'Achizitionare materiale premium (panouri, basstraps)',
       'Plan de instalare personalizat',
       'Calcule RT60 și izolare fonică',
       'Recomandări adaptate spațiului',
       'Suport post-instalare'
     ],
     duration: '2-5 zile',
-    features: ['Home studio-uri', 'Săli de conferințe', 'Cinematografe home', 'Spații comerciale']
+    features: ['Home studio', 'Săli de conferințe', 'Cinematografe home', 'Spații comerciale']
   },
 ];
 
