@@ -25,8 +25,8 @@ export default function About() {
             
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
               <div className="bg-studio-accent text-white p-8 rounded-sm shadow-2xl">
-                <span className="text-5xl font-display font-bold block">15+</span>
-                <span className="text-[10px] uppercase tracking-widest font-bold">Ani de Experiență</span>
+                <span className="text-5xl font-display font-bold block">2019</span>
+                <span className="text-[10px] uppercase tracking-widest font-bold">Anul Fondării</span>
               </div>
             </div>
           </motion.div>
@@ -43,11 +43,20 @@ export default function About() {
             <h2 className="text-5xl md:text-7xl font-display font-bold mb-8 leading-tight text-studio-text-light">
               SUNTEM <br /> <span className="text-studio-accent">PROART</span> STUDIO
             </h2>
-            <p className="text-white/60 text-lg font-light leading-relaxed mb-8">
-              Fondat în 2008, ProArt Studio a fost în fruntea industriei muzicale, 
-              oferind artiștilor mediul perfect pentru a-și surprinde sunetul. 
-              Misiunea noastră este de a reduce decalajul dintre excelența tehnică și libertatea creativă.
-            </p>
+            <div className="text-white/60 text-lg font-light leading-relaxed mb-8 space-y-5">
+              <p>
+                Fondat în 2019, studioul nostru a luat naștere din dorința de a oferi
+                servicii de înregistrare audio de calitate artiștilor din Ploiești și nu
+                numai. Ne desfășurăm activitatea într-un spațiu profesional, dotat pentru
+                a răspunde celor mai înalte standarde de producție audio.
+              </p>
+              <p>
+                Echipa noastră este formată din oameni pasionați, cu experiență și
+                pregătire în domeniu, dedicați fiecărui proiect. Indiferent dacă ești la
+                început de drum sau un artist cu experiență, îți oferim un mediu
+                profesionist în care muzica ta poate prinde viață la cel mai înalt nivel.
+              </p>
+            </div>
             <div className="grid grid-cols-2 gap-8 mb-10">
               <div>
                 <h4 className="text-studio-accent font-display text-xl mb-2">Echipament Modern</h4>
