@@ -6,11 +6,10 @@ import { cn } from '../lib/utils';
 
 const navItems = [
   { name: 'Acasă', to: 'home' },
-  { name: 'Despre', to: 'about' },
   { name: 'Servicii', to: 'services' },
-  { name: 'Înregistrări', to: 'records' },
-  { name: 'Echipament', to: 'equipment' },
   { name: 'Prețuri', to: 'pricing' },
+  { name: 'Despre', to: 'about' },
+  { name: 'Echipament', to: 'equipment' },
   { name: 'Contact', to: 'contact' },
 ];
 
