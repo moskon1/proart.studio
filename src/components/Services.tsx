@@ -310,12 +310,16 @@ export default function Services() {
             
             <div className="flex gap-4">
               <button 
+                type="button"
+                aria-label="Derulează serviciile spre stânga"
                 onClick={() => scroll('left')}
                 className="w-12 h-12 border border-white/10 flex items-center justify-center hover:bg-studio-accent hover:border-studio-accent hover:text-white transition-all text-white"
               >
                 <ChevronLeft size={20} />
               </button>
               <button 
+                type="button"
+                aria-label="Derulează serviciile spre dreapta"
                 onClick={() => scroll('right')}
                 className="w-12 h-12 border border-white/10 flex items-center justify-center hover:bg-studio-accent hover:border-studio-accent hover:text-white transition-all text-white"
               >
@@ -392,6 +396,8 @@ export default function Services() {
               {/* Header with gradient background - Mobile Optimized */}
               <div className="relative bg-gradient-to-br from-studio-accent/20 to-transparent p-4 md:p-8 border-b border-white/10">
                 <button
+                  type="button"
+                  aria-label="Închide detaliile serviciului"
                   onClick={closeModal}
                   className="absolute top-3 right-3 md:top-4 md:right-4 w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/10 hover:bg-studio-accent transition-all flex items-center justify-center group z-10"
                 >
@@ -499,7 +505,7 @@ export default function Services() {
                 <div className="flex flex-col gap-3 md:flex-row md:gap-4 pt-4">
                   <button
                     onClick={closeModal}
-                    className="w-full md:flex-1 bg-studio-accent text-white px-4 md:px-6 py-3 rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-studio-accent transition-all"
+                    className="w-full md:flex-1 bg-studio-accent text-studio-darker px-4 md:px-6 py-3 rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-studio-accent transition-all"
                   >
                     Închide
                   </button>

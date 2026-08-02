@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Anton&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -18,10 +19,12 @@
   body {
     @apply bg-studio-darker text-studio-text font-sans antialiased;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-display uppercase tracking-wider text-studio-text;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Anton&display=swap');

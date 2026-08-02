@@ -53,6 +53,10 @@ export default function Hero() {
             animate={{ scale: 1 }}
             transition={{ duration: 6 }}
             src={slides[currentSlide].image}
+            srcSet={`${slides[currentSlide].image.replace('.webp', '')}-640.webp 640w, ${slides[currentSlide].image.replace('.webp', '')}-1280.webp 1280w, ${slides[currentSlide].image.replace('.webp', '')}-1920.webp 1920w`}
+            sizes="100vw"
+            width="1920"
+            height="1280"
             alt="Studio de înregistrări ProArt din Ploiești"
             className="w-full h-full object-cover opacity-70"
             referrerPolicy="no-referrer"
@@ -76,7 +80,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="mb-4"
             >
-              <span className="text-white font-bold uppercase tracking-[0.4em] text-xs bg-studio-accent px-4 py-2 rounded-sm">
+              <span className="text-studio-darker font-bold uppercase tracking-[0.4em] text-xs bg-studio-accent px-4 py-2 rounded-sm">
                 {slides[currentSlide].subtitle}
               </span>
             </motion.div>
@@ -107,7 +111,7 @@ export default function Hero() {
               <button
                 type="button"
                 onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-                className="group relative bg-studio-accent text-white px-12 py-5 rounded-sm text-xs font-bold uppercase tracking-widest overflow-hidden transition-all"
+                className="group relative bg-studio-accent text-studio-darker px-12 py-5 rounded-sm text-xs font-bold uppercase tracking-widest overflow-hidden transition-all"
               >
                 <span className="relative z-10">Servicii</span>
                 <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
@@ -130,12 +134,16 @@ export default function Hero() {
       {/* Slider Controls */}
       <div className="absolute bottom-12 right-12 flex gap-4 z-20">
         <button
+          type="button"
+          aria-label="Imaginea precedentă"
           onClick={prevSlide}
           className="w-12 h-12 border border-black/10 flex items-center justify-center hover:bg-studio-accent hover:border-studio-accent hover:text-white transition-all text-studio-text"
         >
           <ChevronLeft size={20} />
         </button>
         <button
+          type="button"
+          aria-label="Imaginea următoare"
           onClick={nextSlide}
           className="w-12 h-12 border border-black/10 flex items-center justify-center hover:bg-studio-accent hover:border-studio-accent hover:text-white transition-all text-studio-text"
         >
@@ -148,9 +156,12 @@ export default function Hero() {
         {slides.map((_, i) => (
           <button
             key={i}
+            type="button"
+            aria-label={`Afișează imaginea ${i + 1} din ${slides.length}`}
+            aria-current={currentSlide === i ? 'true' : undefined}
             onClick={() => setCurrentSlide(i)}
-            className={`w-1 h-8 transition-all duration-500 ${
-              currentSlide === i ? 'bg-studio-accent h-12' : 'bg-black/20'
+            className={`relative w-11 h-11 after:absolute after:left-1/2 after:top-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:w-1 transition-all duration-500 ${
+              currentSlide === i ? 'after:bg-studio-accent after:h-11' : 'after:bg-black/30 after:h-8'
             }`}
           />
         ))}

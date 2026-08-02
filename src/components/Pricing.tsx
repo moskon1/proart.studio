@@ -120,15 +120,18 @@ export default function Pricing() {
           </motion.h2>
 
           {/* Tabs */}
-          <div className="flex flex-wrap justify-center gap-8 mb-16 border-b border-white/5">
+          <div role="tablist" aria-label="Categorii de prețuri" className="flex flex-wrap justify-center gap-8 mb-16 border-b border-white/5">
             {(Object.keys(pricingData) as Array<keyof typeof pricingData>).map((tab) => (
               <button
+                type="button"
+                role="tab"
+                aria-selected={activeTab === tab}
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={`pb-4 text-xs font-bold uppercase tracking-[0.3em] transition-all relative ${
                   activeTab === tab 
                     ? 'text-studio-accent' 
-                    : 'text-white/40 hover:text-white'
+                    : 'text-white/70 hover:text-white'
                 }`}
               >
                 {tab}
@@ -200,7 +203,7 @@ export default function Pricing() {
                   >
                     {isPopular && (
                       <div className="absolute top-4 right-4 z-10">
-                        <span className="bg-studio-accent text-white text-[10px] font-bold uppercase tracking-wider py-1 px-2 rounded-full">
+                        <span className="bg-studio-accent text-studio-darker text-[10px] font-bold uppercase tracking-wider py-1 px-2 rounded-full">
                           Recomandat
                         </span>
                       </div>
@@ -263,7 +266,7 @@ export default function Pricing() {
                         contactSection.scrollIntoView({ behavior: 'smooth' });
                       }
                     }}
-                     className="bg-studio-accent text-white px-12 py-5 rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-studio-accent transition-all">
+                     className="bg-studio-accent text-studio-darker px-12 py-5 rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-studio-accent transition-all">
             Rezervă Sesiunea Ta
           </button>
         </div>

@@ -26,7 +26,7 @@ export default function Contact() {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-16 mt-12 w-full">
             <div className="space-y-6">
-              <h4 className="text-studio-accent font-display text-3xl">Locație</h4>
+              <h3 className="text-studio-accent font-display text-3xl">Locație</h3>
               <p className="text-white/50 font-bold uppercase tracking-[0.2em] text-xs leading-relaxed">
                 Liceul Tehnologic UCECOM Spiru Haret, <br /> 
                 Strada Doctor Toma Ionescu 27, <br /> 
@@ -35,13 +35,13 @@ export default function Contact() {
             </div>
             
             <div className="space-y-6">
-              <h4 className="text-studio-accent font-display text-3xl">Rezervări</h4>
+              <h3 className="text-studio-accent font-display text-3xl">Rezervări</h3>
               <address className="text-white/50 not-italic font-bold uppercase tracking-[0.2em] text-xs leading-relaxed">
-                <a className="hover:text-studio-accent transition-colors" href="mailto:proart.ploiesti@gmail.com">
+                <a className="inline-flex min-h-11 items-center hover:text-studio-accent transition-colors" href="mailto:proart.ploiesti@gmail.com">
                   proart.ploiesti@gmail.com
                 </a>
                 <br />
-                <a className="hover:text-studio-accent transition-colors" href="tel:+40720140462">
+                <a className="inline-flex min-h-11 items-center hover:text-studio-accent transition-colors" href="tel:+40720140462">
                   +40 720 140 462
                 </a>
               </address>
@@ -54,7 +54,7 @@ export default function Contact() {
             viewport={{ once: true }}
             className="mt-20 space-y-8 w-full max-w-md"
           >
-            <h4 className="text-studio-text-light font-display text-2xl uppercase tracking-widest">Rapid pe WhatsApp</h4>
+            <h3 className="text-studio-text-light font-display text-2xl uppercase tracking-widest">Rapid pe WhatsApp</h3>
             <a 
               href="https://wa.me/40720140462" 
               target="_blank" 

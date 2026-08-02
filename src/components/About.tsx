@@ -15,6 +15,10 @@ export default function About() {
             <div className="relative z-10 rounded-sm overflow-hidden">
               <img
                 src="/about.webp"
+                srcSet="/about-480.webp 480w, /about-800.webp 800w"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                width="800"
+                height="533"
                 alt="Sesiune de înregistrări la ProArt Studio Ploiești"
                 className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
@@ -24,7 +28,7 @@ export default function About() {
             <div className="absolute -bottom-6 -right-6 w-24 h-24 border-b-2 border-r-2 border-studio-accent z-0" />
             
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-              <div className="bg-studio-accent text-white p-8 rounded-sm shadow-2xl">
+              <div className="bg-studio-accent text-studio-darker p-8 rounded-sm shadow-2xl">
                 <span className="text-5xl font-display font-bold block">2019</span>
                 <span className="text-[10px] uppercase tracking-widest font-bold">Anul Fondării</span>
               </div>

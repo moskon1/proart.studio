@@ -38,6 +38,10 @@ export default function Equipment() {
             <div className="relative rounded-sm overflow-hidden group">
               <img 
                 src="/equip.webp"
+                srcSet="/equip-480.webp 480w, /equip-800.webp 800w"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                width="800"
+                height="533"
                 alt="Echipament Studio"
                 className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
