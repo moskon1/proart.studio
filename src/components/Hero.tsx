@@ -53,7 +53,7 @@ export default function Hero() {
             animate={{ scale: 1 }}
             transition={{ duration: 6 }}
             src={slides[currentSlide].image}
-            srcSet={`${slides[currentSlide].image.replace('.webp', '')}-640.webp 640w, ${slides[currentSlide].image.replace('.webp', '')}-1280.webp 1280w, ${slides[currentSlide].image.replace('.webp', '')}-1920.webp 1920w`}
+            srcSet={`${slides[currentSlide].image.replace('.webp', '')}-640.webp 640w, ${slides[currentSlide].image.replace('.webp', '')}-1280.webp 1280w, ${slides[currentSlide].image.replace('.webp', '')}-1440.webp 1440w, ${slides[currentSlide].image.replace('.webp', '')}-1920.webp 1920w`}
             sizes="100vw"
             width="1920"
             height="1280"
@@ -89,7 +89,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-7xl md:text-9xl lg:text-[10rem] font-display font-bold mb-6 leading-[0.85] tracking-tighter text-studio-text"
+              className="text-7xl md:text-9xl lg:text-[10rem] font-display font-normal mb-6 leading-[0.85] tracking-tighter text-studio-text"
               dangerouslySetInnerHTML={{ __html: slides[currentSlide].title }}
             />
 

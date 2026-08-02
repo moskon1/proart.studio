@@ -13,16 +13,19 @@ export default function About() {
             className="lg:w-1/2 relative"
           >
             <div className="relative z-10 rounded-sm overflow-hidden">
-              <img
-                src="/about.webp"
-                srcSet="/about-480.webp 480w, /about-800.webp 800w"
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                width="800"
-                height="533"
-                alt="Sesiune de înregistrări la ProArt Studio Ploiești"
-                className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
-                referrerPolicy="no-referrer"
-              />
+              <picture>
+                <source media="(max-width: 767px)" srcSet="/about-400.webp" />
+                <img
+                  src="/about-800.webp"
+                  srcSet="/about-480.webp 480w, /about-640.webp 640w, /about-800.webp 800w"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  width="800"
+                  height="533"
+                  alt="Sesiune de înregistrări la ProArt Studio Ploiești"
+                  className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
+                  referrerPolicy="no-referrer"
+                />
+              </picture>
             </div>
             <div className="absolute -top-6 -left-6 w-24 h-24 border-t-2 border-l-2 border-studio-accent z-0" />
             <div className="absolute -bottom-6 -right-6 w-24 h-24 border-b-2 border-r-2 border-studio-accent z-0" />

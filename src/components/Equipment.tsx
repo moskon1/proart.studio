@@ -36,16 +36,19 @@ export default function Equipment() {
             </p>
             
             <div className="relative rounded-sm overflow-hidden group">
-              <img 
-                src="/equip.webp"
-                srcSet="/equip-480.webp 480w, /equip-800.webp 800w"
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                width="800"
-                height="533"
-                alt="Echipament Studio"
-                className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-700"
-                referrerPolicy="no-referrer"
-              />
+              <picture>
+                <source media="(max-width: 767px)" srcSet="/equip-400.webp" />
+                <img
+                  src="/equip-800.webp"
+                  srcSet="/equip-480.webp 480w, /equip-640.webp 640w, /equip-800.webp 800w"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  width="800"
+                  height="533"
+                  alt="Echipament Studio"
+                  className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-700"
+                  referrerPolicy="no-referrer"
+                />
+              </picture>
               <div className="absolute inset-0 bg-studio-accent/10 group-hover:bg-transparent transition-colors duration-700" />
             </div>
           </div>

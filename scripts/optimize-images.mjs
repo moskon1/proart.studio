@@ -6,11 +6,11 @@ const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '
 const publicDir = path.join(projectRoot, 'public');
 
 const images = [
-  { source: 'hero1.jpg', widths: [640, 1280, 1920], quality: 72 },
-  { source: 'hero2.jpg', widths: [640, 1280, 1920], quality: 72 },
-  { source: 'hero3.jpg', widths: [640, 1280, 1920], quality: 72 },
-  { source: 'about.jpg', widths: [480, 800], quality: 76 },
-  { source: 'equip.jpg', widths: [480, 800], quality: 76 },
+  { source: 'hero1.jpg', widths: [640, 1280, 1440, 1920], quality: 62 },
+  { source: 'hero2.jpg', widths: [640, 1280, 1440, 1920], quality: 62 },
+  { source: 'hero3.jpg', widths: [640, 1280, 1440, 1920], quality: 62 },
+  { source: 'about.jpg', widths: [400, 480, 640, 800], quality: 74 },
+  { source: 'equip.jpg', widths: [400, 480, 640, 800], quality: 74 },
 ];
 
 for (const { source, widths, quality } of images) {
@@ -30,5 +30,6 @@ for (const { source, widths, quality } of images) {
 }
 
 await sharp(path.join(publicDir, 'logo.png'))
+  .resize({ width: 160, withoutEnlargement: true })
   .webp({ quality: 82, effort: 6, alphaQuality: 90 })
   .toFile(path.join(publicDir, 'logo.webp'));

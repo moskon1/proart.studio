@@ -47,8 +47,8 @@ export default function Navbar() {
           <img
             src="/logo.webp"
             alt="ProArt Studio"
-            width="360"
-            height="224"
+            width="160"
+            height="93"
             className={cn(
               'h-16 md:h-20 w-auto object-contain transition-[filter] duration-300',
               isScrolled ? 'brightness-100' : 'brightness-0 invert'
