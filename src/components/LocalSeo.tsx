@@ -6,7 +6,7 @@ const highlights = [
   {
     icon: Mic2,
     title: 'Înregistrări audio',
-    text: 'Sesiuni pentru voce, instrumente, trupe, podcast și voice-over, într-un spațiu tratat acustic.',
+    text: 'Sesiuni pentru voce, instrumente, trupe, podcast și voice-over pentru reclame, într-un spațiu tratat acustic.',
   },
   {
     icon: Headphones,
@@ -43,7 +43,7 @@ export default function LocalSeo() {
             ProArt Studio este un studio de muzică din Ploiești dedicat artiștilor,
             trupelor și creatorilor care caută înregistrări clare și un proces creativ
             bine ghidat. Oferim servicii audio complete, de la captarea vocii sau a
-            instrumentelor la producție muzicală, mixaj și mastering.
+            instrumentelor la producție muzicală, mixaj, mastering și producție de spoturi audio pentru reclame.
           </p>
         </motion.div>
 

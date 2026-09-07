@@ -5,4 +5,12 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url><loc>https://proartstudio.ro/servicii/inregistrare</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://proartstudio.ro/servicii/mixaj</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://proartstudio.ro/servicii/mastering</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://proartstudio.ro/servicii/voice-over</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://proartstudio.ro/servicii/post-productie-audio</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://proartstudio.ro/servicii/distributie-muzicala</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://proartstudio.ro/servicii/proiecte-educationale</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://proartstudio.ro/servicii/tratamente-acustice</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

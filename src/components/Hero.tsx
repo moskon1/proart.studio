@@ -80,7 +80,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="mb-4"
             >
-              <span className="text-studio-darker font-bold uppercase tracking-[0.4em] text-xs bg-studio-accent px-4 py-2 rounded-sm">
+              <span className="text-studio-darker uppercase tracking-[0.4em] text-xs bg-studio-accent px-4 py-2 rounded-sm">
                 {slides[currentSlide].subtitle}
               </span>
             </motion.div>
@@ -89,7 +89,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-7xl md:text-9xl lg:text-[10rem] font-display font-normal mb-6 leading-[0.85] tracking-tighter text-studio-text"
+              className="text-6xl sm:text-7xl md:text-8xl lg:text-[8.5rem] font-display font-normal mb-6 leading-[0.92] tracking-[0.01em] text-studio-text"
               dangerouslySetInnerHTML={{ __html: slides[currentSlide].title }}
             />
 
@@ -111,7 +111,7 @@ export default function Hero() {
               <button
                 type="button"
                 onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-                className="group relative bg-studio-accent text-studio-darker px-12 py-5 rounded-sm text-xs font-bold uppercase tracking-widest overflow-hidden transition-all"
+                className="group relative bg-studio-accent text-studio-darker px-12 py-5 rounded-sm text-xs uppercase tracking-widest overflow-hidden transition-all"
               >
                 <span className="relative z-10">Servicii</span>
                 <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
@@ -122,7 +122,7 @@ export default function Hero() {
               <button
                 type="button"
                 onClick={() => document.getElementById('equipment')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-black/5 backdrop-blur-sm text-studio-text px-12 py-5 rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-studio-accent hover:text-white transition-all border border-black/10"
+                className="bg-black/5 backdrop-blur-sm text-studio-text px-12 py-5 rounded-sm text-xs uppercase tracking-widest hover:bg-studio-accent hover:text-white transition-all border border-black/10"
               >
                 Echipament
               </button>

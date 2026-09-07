@@ -79,7 +79,8 @@ const pricingData = {
     { name: 'Înregistrare Podcast', price: '50', description: 'Înregistrare vocală clară pentru emisiunea ta.' },
     { name: 'Înregistrare Grup', price: '70', description: 'Înregistrare live pentru întregul grup.' },
     { name: 'Înregistrare Locație', price: '100', description: 'Aducem studioul la tine.' },
-    { name: 'Voice Over', price: '50', description: 'Înregistrare vocală de grad comercial.' },
+    { name: 'Voice Over Reclamă', price: '30', description: 'Înregistrare, editare și procesare vocală pentru reclame.' },
+    { name: 'Producție Reclamă Audio', price: '60', description: 'Voice-over, muzică, efecte, editare și mixaj pentru spoturi publicitare.' },
   ],
   Mixaj: [
     { name: 'Mixaj Piesă Single', price: '50', description: 'Mixaj complet al piesei tale.' },
@@ -170,7 +171,7 @@ export default function Pricing() {
                     </h3>
                     <div className="flex-grow border-b border-dotted border-white/10 mb-1.5" />
                     <span className="text-xl font-display font-bold text-studio-accent">
-                      {item.price}€
+                      {item.price}{item.price.includes('lei') ? '' : '€'}
                     </span>
                   </div>
                   <p className="text-white/30 text-[10px] uppercase tracking-widest font-bold">

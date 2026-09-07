@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/servicii/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

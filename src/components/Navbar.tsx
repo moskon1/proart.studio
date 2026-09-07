@@ -15,6 +15,7 @@ const navItems = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const isHomePage = window.location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,7 +41,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a
-          href="#home"
+          href="/"
           className="flex items-center cursor-pointer"
           aria-label="ProArt Studio – Acasă"
         >
@@ -61,7 +62,7 @@ export default function Navbar() {
           {navItems.map((item) => (
             <a
               key={item.to}
-              href={`#${item.to}`}
+              href={isHomePage ? `#${item.to}` : item.to === 'home' ? '/' : `/#${item.to}`}
               className={cn(
                 'relative text-xs font-bold uppercase tracking-[0.2em] transition-colors cursor-pointer group/link',
                 isScrolled ? 'text-black/70 hover:text-studio-accent' : 'text-white/70 hover:text-studio-accent'
@@ -106,7 +107,7 @@ export default function Navbar() {
             {navItems.map((item) => (
               <a
                 key={item.to}
-                href={`#${item.to}`}
+                href={isHomePage ? `#${item.to}` : item.to === 'home' ? '/' : `/#${item.to}`}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="text-sm font-bold uppercase tracking-widest hover:text-studio-accent transition-colors text-black"
               >

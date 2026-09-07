@@ -9,7 +9,8 @@ const pricingData = {
     { name: 'Înregistrare Podcast', price: '30', description: 'Înregistrare vocală clară pentru emisiunea ta.' },
     { name: 'Înregistrare', price: '50', description: 'Înregistrare live pentru întregul grup.' },
     { name: 'Înregistrare Locație', price: '100', description: 'Aducem studioul la tine.' },
-    { name: 'Voice Over', price: '30', description: 'Înregistrare vocală de grad comercial.' },
+    { name: 'Voice Over Reclamă', price: '30', description: 'Înregistrare, editare și procesare vocală pentru reclame.' },
+    { name: 'Producție Reclamă Audio', price: '60', description: 'Voice-over, muzică, efecte, editare și mixaj pentru spoturi publicitare.' },
   ],
   Mixaj: [
     { name: 'Mixaj Piesă Single', price: '50', description: 'Mixaj complet al piesei tale.' },
@@ -30,7 +31,7 @@ const getPriceFromPricing = (serviceTitle: string): string => {
     'Înregistrare': { price: '30-100', category: 'Înregistrare' },
     'Mixaj': { price: '30-100', category: 'Mixaj' },
     'Mastering': { price: '30-70', category: 'Mastering' },
-    'Voice Over': { price: '30', category: 'Înregistrare' },
+    'Voice Over Reclamă': { price: '30', category: '' },
     'Post-producție audio': { price: 'Personalizat', category: '' },
     'Distribuție muzicală': { price: '50', category: '' },
     'Proiecte educaționale': { price: 'Personalizat', category: '' },
@@ -95,11 +96,11 @@ const getDetailedPricing = (serviceTitle: string) => {
           { name: 'Pre-Master Vinil', price: '50€' }
         ]
       };
-    case 'Voice Over':
+    case 'Voice Over Reclamă':
       return {
         startingPrice: '30€',
         priceRange: '30€',
-        priceDetails: [{ name: 'Voice Over', price: '30€' }]
+        priceDetails: [{ name: 'Voice Over Reclamă', price: '30€' }, { name: 'Producție Reclamă Audio', price: '60€' }]
       };
     default:
       return null;
@@ -173,19 +174,22 @@ Folosim echipamente și tehnici moderne pentru a asigura un nivel optim de loudn
   },
   {
     icon: Music,
-    title: 'Voice Over',
-    description: 'Oferim servicii profesionale de înregistrare voice over pentru reclame, prezentări, audiobook-uri sau conținut online.',
-    detailedDescription: `Oferim servicii profesionale de înregistrare voice over pentru reclame, prezentări, audiobook-uri sau conținut online. Asigurăm atât suport tehnic de înaltă calitate, cât și îndrumare pentru obținerea unei dicții clare, naturale și expresive, adaptate scopului proiectului.`,
+    title: 'Voice Over Reclamă',
+    description: 'Înregistrare și procesare voice-over pentru reclame, spoturi publicitare, radio și social media.',
+    detailedDescription: `Oferim servicii de voice-over pentru reclame, spoturi publicitare, materiale promoționale și conținut online. Înregistrăm vocea, realizăm editarea și procesarea vocală, apoi pregătim materialul pentru canalul de difuzare ales.
+
+  Putem lucra cu vocea clientului sau cu un voice-over artist, în funcție de proiect. Pentru producția completă a unui spot, integrăm muzică și efecte sonore, realizăm mixajul și livrăm versiuni potrivite pentru radio, YouTube, social media, website-uri sau magazine.`,
     includes: [
       'Vocal Booth',
       'Microfoan Neumann TLM 104',
       'Editare și curățare audio',
-      'Mixaj voce',
+      'Procesare vocală și mixaj',
+      'Integrare muzică și efecte sonore la cerere',
       'Pregătire pentru broadcast',
       'Îndrumare pentru dicție și expresivitate'
     ],
     duration: '1-3 ore',
-    features: ['Reclame radio/TV', 'Audiobook-uri', 'Prezentări corporate', 'Jocuri video']
+    features: ['Spoturi radio și TV', 'Social media și YouTube', 'Magazine și materiale promoționale', 'Prezentări corporate']
   },
   {
     icon: Radio,
@@ -252,9 +256,21 @@ Folosim echipamente și tehnici moderne pentru a asigura un nivel optim de loudn
   },
 ];
 
+const serviceSlugs: Record<string, string> = {
+  'Înregistrare': 'inregistrare',
+  'Mixaj': 'mixaj',
+  'Mastering': 'mastering',
+  'Voice Over Reclamă': 'voice-over',
+  'Post-producție audio': 'post-productie-audio',
+  'Distribuție muzicală': 'distributie-muzicala',
+  'Proiecte educaționale': 'proiecte-educationale',
+  'Tratamente acustice': 'tratamente-acustice',
+};
+
 // Enhance services with dynamic price getters
 const servicesWithPrices = services.map(service => ({
   ...service,
+  slug: serviceSlugs[service.title],
   getPrice: () => getPriceFromPricing(service.title),
   getDetailedPricing: () => getDetailedPricing(service.title)
 }));
@@ -356,13 +372,13 @@ export default function Services() {
                     {service.description}
                   </p>
                   
-                  <button 
-                    onClick={() => openModal(service)}
+                  <a
+                    href={`/servicii/${service.slug}`}
                     className="mt-6 md:mt-8 flex items-center gap-2 text-studio-accent group-hover:text-white transition-colors duration-500"
                   >
                     <span className="text-[10px] font-bold uppercase tracking-widest">Citește Mai Mult</span>
                     <div className="w-6 md:w-8 h-px bg-current" />
-                  </button>
+                  </a>
                 </div>
                 
                 <div className="absolute -bottom-10 -right-10 text-white/5 font-display text-7xl md:text-9xl transform group-hover:scale-110 group-hover:text-white/10 transition-all duration-700">

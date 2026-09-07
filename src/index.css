@@ -61,5 +61,7 @@
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-display uppercase tracking-wider text-studio-text;
+    font-synthesis: none;
+    font-weight: 400 !important;
   }
 }

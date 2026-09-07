@@ -10,8 +10,15 @@ import Artists from './components/Artists';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import LocalSeo from './components/LocalSeo';
+import ServicePage from './components/ServicePage';
 
 export default function App() {
+  const servicePath = window.location.pathname.match(/^\/servicii\/([^/]+)\/?$/);
+
+  if (servicePath) {
+    return <ServicePage slug={decodeURIComponent(servicePath[1])} />;
+  }
+
   return (
     <div className="min-h-screen">
       <Navbar />
